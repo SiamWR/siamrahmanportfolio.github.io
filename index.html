@@ -1,881 +1,1088 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Md. Siam Waliur Rahman Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Portfolio of Md. Siam Waliur Rahman, Data Analyst and Researcher, featuring analytics, business intelligence, and research projects.">
-    <meta name="theme-color" content="#0b1120">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+<head>
+  <title>Md. Siam Waliur Rahman Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/ionicons.min.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-
-<style>
-
-/* =========================================================
-   PORTFOLIO DESIGN REFRESH — preserves original content/data
-   ========================================================= */
-:root {
-  --portfolio-bg: #0b1120;
-  --portfolio-surface: #111b2e;
-  --portfolio-surface-2: #162238;
-  --portfolio-text: #e8eef8;
-  --portfolio-muted: #aab8ce;
-  --portfolio-accent: #f5b942;
-  --portfolio-accent-2: #6bd6c7;
-  --portfolio-border: rgba(181, 199, 226, .15);
-  --portfolio-shadow: 0 18px 48px rgba(0, 0, 0, .22);
-}
-html { scroll-behavior: smooth; scroll-padding-top: 88px; }
-body {
-  background: var(--portfolio-bg);
-  color: var(--portfolio-muted);
-  font-family: "Poppins", sans-serif;
-  line-height: 1.75;
-  overflow-x: hidden;
-}
-body, p, li { font-size: 15px; }
-p { color: var(--portfolio-muted); }
-a { transition: color .22s ease, background-color .22s ease, transform .22s ease, border-color .22s ease; }
-a:focus-visible, button:focus-visible {
-  outline: 3px solid var(--portfolio-accent-2);
-  outline-offset: 4px;
-}
-.container { max-width: 1180px; }
-section { position: relative; }
-.ftco-section { padding: 100px 0; }
-.ftco-no-pb { padding-bottom: 45px; }
-.heading-section { max-width: 850px; margin-left: auto; margin-right: auto; }
-.heading-section h2, h2, h3, h4 { color: var(--portfolio-text); font-weight: 600; }
-.heading-section p { max-width: 760px; margin: 0 auto; }
-.heading-section .big {
-  color: rgba(232, 238, 248, .045);
-  font-weight: 800;
-  letter-spacing: .04em;
-  pointer-events: none;
-}
-.heading-section h2 { margin-bottom: 18px; }
-.heading-section h2:after {
-  content: "";
-  display: block;
-  width: 54px;
-  height: 3px;
-  margin: 18px auto 0;
-  border-radius: 3px;
-  background: var(--portfolio-accent);
-}
-.ftco_navbar {
-  background: rgba(11, 17, 32, .88) !important;
-  border-bottom: 1px solid var(--portfolio-border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  padding: 12px 0;
-}
-.navbar-brand { color: var(--portfolio-text) !important; font-weight: 700; letter-spacing: -.025em; }
-.navbar-nav .nav-link {
-  color: #c2cde0 !important;
-  font-size: 13px;
-  font-weight: 500;
-  padding: 12px 14px !important;
-}
-.navbar-nav .nav-link:hover, .navbar-nav .active > .nav-link { color: var(--portfolio-accent) !important; }
-.navbar-toggler { border: 1px solid var(--portfolio-border); }
-.hero { background: radial-gradient(ellipse at 80% 30%, rgba(58, 91, 135, .23), transparent 45%); }
-.hero .slider-item { min-height: 690px; }
-.hero .slider-text { min-height: 690px; align-items: center !important; }
-.hero .one-third {
-  opacity: .72;
-  background-position: center top;
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: saturate(.82);
-}
-.hero .one-third .overlay { background: linear-gradient(90deg, var(--portfolio-bg), transparent 55%, rgba(11,17,32,.12)); }
-.hero .one-forth { min-height: 560px; }
-.hero .text { max-width: 660px; }
-.hero .subheading { color: var(--portfolio-accent); font-weight: 600; letter-spacing: .18em; text-transform: uppercase; font-size: 13px; }
-.hero h1 { color: var(--portfolio-text); font-size: clamp(2.5rem, 5.3vw, 4.65rem); font-weight: 700; line-height: 1.12; letter-spacing: -.045em; }
-.hero h1 span { color: var(--portfolio-accent); }
-.hero h2 { color: #d4deee; font-size: 1.15rem; font-weight: 500; }
-#typing-animation {
-  display: inline-block;
-  min-height: 1.8em;
-  color: var(--portfolio-accent-2);
-  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
-  font-weight: 600;
-  white-space: normal;
-}
-.btn { border-radius: 8px; font-size: 13px; font-weight: 600; letter-spacing: .015em; }
-.btn-primary { background: var(--portfolio-accent); border-color: var(--portfolio-accent); color: #172033 !important; }
-.btn-primary:hover { background: #ffd071; border-color: #ffd071; transform: translateY(-2px); }
-.btn-white.btn-outline-white { border: 1px solid rgba(232,238,248,.48) !important; color: var(--portfolio-text) !important; }
-.btn-white.btn-outline-white:hover { background: var(--portfolio-accent) !important; border-color: var(--portfolio-accent) !important; color: #172033 !important; }
-#about-section, #resume-section, #project-section, #contact-section { scroll-margin-top: 82px; }
-.about-mf .box-shadow-full { padding: 2rem; }
-.img-about { width: 100%; background: var(--portfolio-surface); border: 1px solid var(--portfolio-border); border-radius: 18px; overflow: hidden; box-shadow: var(--portfolio-shadow); }
-.img-about > .overlay { padding: 26px; background: transparent; }
-.about-img img { width: 100%; max-width: 150px; aspect-ratio: 1; object-fit: cover; border-radius: 14px !important; border: 2px solid rgba(245,185,66,.55); margin: 0 !important; }
-.about-info p { margin: 0 0 8px; font-size: 12px; overflow-wrap: anywhere; }
-.title-s { color: var(--portfolio-text); font-weight: 600; }
-.skill-mf { margin-top: 26px; }
-.skill-mf .title-s { margin-bottom: 18px; color: var(--portfolio-text); font-size: 17px; }
-.skill-mf > span { color: #dbe5f4; font-size: 12px; font-weight: 500; }
-.skill-mf .progress { height: 7px; margin: 8px 0 20px; border-radius: 20px; background: #26334a; overflow: hidden; }
-.skill-mf .progress .progress-bar { height: 100%; border-radius: 20px; background: linear-gradient(90deg, var(--portfolio-accent), var(--portfolio-accent-2)); }
-#about-section .heading-section { padding-top: 6px; }
-#about-section .heading-section h2 { text-align: left; }
-#about-section .heading-section h2:after { margin-left: 0; }
-#about-section .about-info li { border-bottom: 1px solid var(--portfolio-border); padding: 10px 0; gap: 12px; }
-#about-section .about-info li span:first-child { min-width: 100px; color: var(--portfolio-text); font-weight: 600; }
-#about-section .about-info li span:last-child { overflow-wrap: anywhere; }
-.counter-wrap { padding-top: 8px; }
-.counter-wrap .number { color: var(--portfolio-accent); font-size: 2.3rem; font-weight: 700; }
-#resume-section .row > h1.big-4 { color: var(--portfolio-text); font-size: 1.7rem; font-weight: 700; }
-.underline { width: 55px; height: 3px; margin: 12px 0 20px; background: var(--portfolio-accent); border-radius: 5px; }
-.resume-wrap {
-  height: 100%;
-  padding: 28px;
-  background: var(--portfolio-surface);
-  border: 1px solid var(--portfolio-border);
-  border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(0,0,0,.12);
-  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-.resume-wrap:hover { transform: translateY(-5px); border-color: rgba(245,185,66,.45); box-shadow: var(--portfolio-shadow); }
-.resume-wrap .date { display: inline-block; margin-bottom: 12px; color: var(--portfolio-accent); font-size: 12px; font-weight: 700; letter-spacing: .07em; }
-.resume-wrap h2 { font-size: 1.25rem; line-height: 1.45; }
-.resume-wrap .position { color: var(--portfolio-accent-2); font-size: 13px; font-weight: 500; }
-.resume-wrap ul { padding-left: 20px; }
-.resume-wrap li { margin: 8px 0; }
-#resume-section .col-md-14 { width: 100%; max-width: 100%; flex: 0 0 100%; }
-#project-section .row.d-flex { row-gap: 28px; }
-.blog-entry {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: var(--portfolio-surface);
-  border: 1px solid var(--portfolio-border);
-  border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(0,0,0,.12);
-  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
-}
-.blog-entry:hover { transform: translateY(-6px); border-color: rgba(107,214,199,.4); box-shadow: var(--portfolio-shadow); }
-.blog-entry .block-20 {
-  display: block;
-  width: 100%;
-  height: auto;
-  min-height: 230px;
-  aspect-ratio: 16 / 9;
-  background-color: #1b2940;
-  background-position: center;
-  background-size: cover;
-  transition: background-size .35s ease, filter .25s ease;
-}
-.blog-entry:hover .block-20 { filter: saturate(1.12); }
-.zoom-effect:hover { transform: none; }
-.blog-entry .text { float: none !important; padding: 22px 23px 25px; margin: 0 !important; flex: 1; }
-.blog-entry .heading { margin: 0 0 12px; font-size: 1.12rem; line-height: 1.5; }
-.blog-entry .heading a { color: var(--portfolio-text); }
-.blog-entry .heading a:hover { color: var(--portfolio-accent); }
-.blog-entry p { margin-bottom: 0; font-size: 13px; line-height: 1.8; }
-#contact-section .contact-info { row-gap: 18px; }
-.contact-info .box {
-  width: 100%;
-  background: var(--portfolio-surface);
-  border: 1px solid var(--portfolio-border);
-  border-radius: 16px;
-  transition: transform .25s ease, border-color .25s ease;
-}
-.contact-info .box:hover { transform: translateY(-4px); border-color: rgba(245,185,66,.45); }
-.contact-info .icon { width: 58px; height: 58px; margin: 0 auto 18px; border-radius: 15px; background: rgba(245,185,66,.12); color: var(--portfolio-accent); font-size: 23px; }
-.contact-info h3 { font-size: 14px; font-weight: 600; }
-.contact-info p, .contact-info a { overflow-wrap: anywhere; font-size: 13px; }
-.contact-info a:hover { color: var(--portfolio-accent); }
-#contact-section h4 { color: var(--portfolio-text); }
-.ftco-footer-social a { background: var(--portfolio-surface-2); border: 1px solid var(--portfolio-border); }
-.ftco-footer-social a:hover { background: var(--portfolio-accent); color: #172033; transform: translateY(-3px); }
-#ftco-loader { background: var(--portfolio-bg); }
-@media (min-width: 992px) {
-  .hero .one-third { width: 48%; }
-  .hero .one-forth { width: 58%; }
-}
-@media (max-width: 991.98px) {
-  .ftco-section { padding: 76px 0; }
-  .hero .slider-item, .hero .slider-text { min-height: 620px; }
-  .hero .one-third { opacity: .35; width: 100%; }
-  .hero .one-forth { width: 100%; min-height: 560px; }
-  .hero .text { padding: 35px 0; }
-  .ftco_navbar { background: #0b1120 !important; }
-  .navbar-collapse { padding-top: 10px; }
-}
-@media (max-width: 767.98px) {
-  .ftco-section { padding: 62px 0; }
-  .hero .slider-item, .hero .slider-text { min-height: 590px; }
-  .hero .one-forth { min-height: 530px; }
-  .hero h1 { font-size: clamp(2.15rem, 9vw, 3.2rem); }
-  .hero .text { padding: 30px 8px; }
-  .img-about > .overlay { padding: 20px; }
-  .about-img img { max-width: 125px; }
-  #about-section .heading-section { margin-top: 42px; }
-  #about-section .about-info li { align-items: flex-start !important; }
-  #about-section .about-info li span:first-child { min-width: 86px; }
-  .resume-wrap { padding: 23px; }
-  .blog-entry .block-20 { min-height: 190px; }
-}
-@media (max-width: 420px) {
-  .navbar-brand { max-width: 235px; white-space: normal; font-size: 15px; line-height: 1.35; }
-  .hero .slider-item, .hero .slider-text { min-height: 550px; }
-  .hero .one-forth { min-height: 500px; }
-  .btn { padding: 12px 16px !important; }
-  .about-img img { max-width: 105px; }
-}
-/* Respect reduced-motion preferences for visitors who disable animation. */
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-</style>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Md. Siam Waliur Rahman</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hi!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Md. Siam Waliur Rahman</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-(function () {
-  const element = document.getElementById("typing-animation");
-  if (!element) return;
-
-  const roles = ["Statistician", "Data Analyst", "Researcher"];
-  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  let roleIndex = 0;
-  let characterIndex = 0;
-  let deleting = false;
-
-  function typeNext() {
-    if (reducedMotion) {
-      element.textContent = roles[0];
-      return;
+  <style>
+    :root {
+      --portfolio-bg: #050505;
+      --portfolio-surface: #101010;
+      --portfolio-surface-2: #161616;
+      --portfolio-border: rgba(255, 255, 255, 0.09);
+      --portfolio-text: #f5f5f5;
+      --portfolio-muted: #b3b3b3;
+      --portfolio-accent: #ffbd39;
+      --portfolio-accent-soft: rgba(255, 189, 57, 0.12);
+      --portfolio-radius: 18px;
+      --portfolio-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
+      --portfolio-transition: 220ms ease;
     }
 
-    const currentRole = roles[roleIndex];
-    element.textContent = currentRole.slice(0, characterIndex);
-
-    if (!deleting && characterIndex < currentRole.length) {
-      characterIndex++;
-      window.setTimeout(typeNext, 95);
-    } else if (!deleting) {
-      deleting = true;
-      window.setTimeout(typeNext, 1250);
-    } else if (characterIndex > 0) {
-      characterIndex--;
-      window.setTimeout(typeNext, 45);
-    } else {
-      deleting = false;
-      roleIndex = (roleIndex + 1) % roles.length;
-      window.setTimeout(typeNext, 260);
+    html {
+      scroll-behavior: smooth;
     }
-  }
 
-  typeNext();
-})();
-</script>
+    body {
+      background: var(--portfolio-bg);
+      color: var(--portfolio-text);
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
 
-						<br>
-						<br>
-			            <h2>Data Analyst</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p> <a href="https://github.com/SiamWR" class="btn btn-white btn-outline-white py-3 px-4">My works(GitHub)</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
+    a {
+      transition: color var(--portfolio-transition), opacity var(--portfolio-transition), transform var(--portfolio-transition);
+    }
 
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--portfolio-accent);
+      outline-offset: 4px;
+    }
 
+    .container {
+      position: relative;
+    }
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Portrait of Md. Siam Waliur Rahman">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Md Siam Waliur Rahman</span></p>
-										<p><span class="title-s">Role: </span> <span>Data Analyst | Researcher</span></p>
-										<p><span class="title-s">Experience: </span> <span>Project-Based Experience in Data Analytics & Research</span></p>
-										<p><span class="title-s">Address: </span> <span>Dhaka, Bangladesh</span></p>
-									  </div>
-									</div>
-								  </div>
+    /* Navigation */
+    #ftco-navbar {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid transparent;
+      transition: background var(--portfolio-transition), border-color var(--portfolio-transition), box-shadow var(--portfolio-transition);
+    }
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>PYTHON, R & STATA</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Excel & Power BI</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>SQL</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Statistical Analysis</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Machine Learning</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>I am a Data Analyst and Researcher with experience in statistical data analysis, data visualization, and quantitative research. Through academic and independent projects, I have worked extensively with R, SPSS, Stata, Python, Excel, Power BI, and SQL to analyze complex datasets and generate actionable insights.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Data Science &amp; Business Intelligence</span></li>
-									<li class="d-flex"><span>Education:</span> <span>MS in Agricultural Statistics (BAU) | B.Sc. in Statistics (MBSTU)</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Bangla</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Excel &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>R, Python, SPSS, Stata, SQL, Machine Learning &amp; Data Visualization</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Photography, Drawing, Teaching, Singing</span></li>
-									
-								</ul>
-							</div>
-						</div>
+    #ftco-navbar.scrolled,
+    #ftco-navbar.awake {
+      background: rgba(5, 5, 5, 0.94) !important;
+      border-bottom-color: var(--portfolio-border);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
 
+    .navbar-brand {
+      font-weight: 700 !important;
+      letter-spacing: -0.3px;
+      white-space: normal;
+    }
 
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="8">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="http://www.linkedin.com/in/mdsiamwaliur" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
+    .navbar-nav .nav-link {
+      font-weight: 500;
+      letter-spacing: 0.1px;
+    }
 
+    .navbar-nav .nav-link span {
+      position: relative;
+    }
 
+    .navbar-nav .nav-link span::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 0;
+      height: 2px;
+      background: var(--portfolio-accent);
+      transition: width var(--portfolio-transition);
+    }
 
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>Data Analyst & Researcher with expertise in statistics, data visualization, business intelligence, and quantitative research. Proficient in R, Python, SPSS, Stata, SQL, Power BI and Excel with hands-on experience gained through academic and project-based work. Passionate about leveraging data-driven insights to solve real-world problems and support informed decision-making</p>
+    .navbar-nav .nav-link:hover span::after,
+    .navbar-nav .nav-item.active .nav-link span::after {
+      width: 100%;
+    }
+
+    /* Hero */
+    #home-section {
+      position: relative;
+      background:
+        radial-gradient(circle at 18% 25%, rgba(255, 189, 57, 0.10), transparent 28%),
+        linear-gradient(180deg, #050505 0%, #080808 100%);
+    }
+
+    #home-section .slider-item,
+    #home-section .slider-text {
+      min-height: 100vh;
+    }
+
+    #home-section .slider-item .overlay {
+      background: linear-gradient(90deg, rgba(5, 5, 5, 0.28), rgba(5, 5, 5, 0.05));
+    }
+
+    #home-section .one-third.img {
+      background-size: contain;
+      background-position: center bottom;
+      background-repeat: no-repeat;
+      filter: saturate(0.96) contrast(1.02);
+    }
+
+    #home-section .one-forth .text {
+      max-width: 680px;
+      padding: 28px 0 56px;
+    }
+
+    #home-section .subheading {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 5px 14px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(255, 189, 57, 0.28);
+      border-radius: 999px;
+      background: var(--portfolio-accent-soft);
+      color: var(--portfolio-accent) !important;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+    }
+
+    #home-section h1 {
+      line-height: 1.08;
+      letter-spacing: -1.6px;
+    }
+
+    #home-section h1 span {
+      color: var(--portfolio-accent);
+    }
+
+    #typing-animation {
+      display: inline-flex;
+      align-items: center;
+      min-height: 48px;
+      margin: 2px 0 6px;
+      color: #ffffff;
+      font-size: clamp(1.35rem, 2.3vw, 1.9rem);
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    #typing-animation::after {
+      content: "";
+      width: 2px;
+      height: 1.15em;
+      margin-left: 7px;
+      background: var(--portfolio-accent);
+      animation: portfolio-caret 0.8s steps(1) infinite;
+    }
+
+    @keyframes portfolio-caret {
+      50% { opacity: 0; }
+    }
+
+    #home-section h2 {
+      margin-top: 4px;
+      color: #d9d9d9;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    .portfolio-primary-btn,
+    .btn.btn-primary,
+    .btn.btn-white.btn-outline-white {
+      border-radius: 999px !important;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      transition: transform var(--portfolio-transition), box-shadow var(--portfolio-transition), background var(--portfolio-transition);
+    }
+
+    .btn.btn-white.btn-outline-white:hover,
+    .btn.btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(255, 189, 57, 0.18);
+    }
+
+    /* Shared section styling */
+    .ftco-section {
+      padding-top: 6.5rem;
+      padding-bottom: 6.5rem;
+    }
+
+    .heading-section .big {
+      opacity: 0.045;
+      letter-spacing: -2px;
+    }
+
+    .heading-section h2,
+    .big-4 {
+      letter-spacing: -0.7px;
+    }
+
+    .heading-section > p {
+      max-width: 860px;
+      margin-left: auto;
+      margin-right: auto;
+      color: var(--portfolio-muted);
+    }
+
+    .underline {
+      height: 3px;
+      width: 74px;
+      margin-left: 18px;
+      border-radius: 999px;
+      background: var(--portfolio-accent);
+    }
+
+    /* About */
+    #about-section {
+      background: linear-gradient(180deg, #080808 0%, #050505 100%);
+    }
+
+    #about-section .img-about {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    #about-section .img-about > .overlay {
+      width: 100%;
+      padding: 30px;
+      border: 1px solid var(--portfolio-border);
+      border-radius: var(--portfolio-radius);
+      background: linear-gradient(145deg, rgba(22, 22, 22, 0.98), rgba(12, 12, 12, 0.98));
+      box-shadow: var(--portfolio-shadow);
+    }
+
+    .about-img {
+      margin-bottom: 1.5rem;
+    }
+
+    .about-img img {
+      width: 100%;
+      max-width: 190px;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      margin-left: 0 !important;
+      border: 2px solid rgba(255, 189, 57, 0.34);
+      border-radius: 18px !important;
+      box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
+    }
+
+    .about-info p {
+      margin-bottom: 11px;
+      color: var(--portfolio-muted);
+    }
+
+    .about-info .title-s,
+    .skill-mf .title-s {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .skill-mf {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--portfolio-border);
+    }
+
+    .skill-mf > span {
+      color: #e6e6e6;
+      font-size: 0.92rem;
+    }
+
+    .skill-mf .progress {
+      height: 7px;
+      margin: 8px 0 20px;
+      overflow: hidden;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .skill-mf .progress .progress-bar {
+      height: 7px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #ffbd39, #ffd36f);
+      box-shadow: 0 0 14px rgba(255, 189, 57, 0.28);
+    }
+
+    #about-section .col-md-6.col-lg-7 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #about-section .heading-section > p {
+      margin-left: 0;
+      color: #cccccc;
+    }
+
+    #about-section .about-info.mt-4 {
+      display: grid;
+      gap: 4px;
+      margin-top: 28px !important;
+    }
+
+    #about-section .about-info.mt-4 li {
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    #about-section .about-info.mt-4 li > span:first-child {
+      flex: 0 0 118px;
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    #about-section .about-info.mt-4 li > span:last-child {
+      color: var(--portfolio-muted);
+    }
+
+    .counter-wrap .number {
+      color: var(--portfolio-accent) !important;
+      font-weight: 700;
+    }
+
+    /* Resume */
+    #resume-section {
+      background: #050505;
+    }
+
+    #resume-section .resume-wrap {
+      height: 100%;
+      padding: 32px;
+      border: 1px solid var(--portfolio-border);
+      border-radius: var(--portfolio-radius);
+      background: linear-gradient(145deg, rgba(20, 20, 20, 0.98), rgba(12, 12, 12, 0.98));
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
+      transition: transform var(--portfolio-transition), border-color var(--portfolio-transition), box-shadow var(--portfolio-transition);
+    }
+
+    #resume-section .resume-wrap:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 189, 57, 0.22);
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
+    }
+
+    #resume-section .resume-wrap .date {
+      display: inline-flex;
+      padding: 4px 11px;
+      border-radius: 999px;
+      background: var(--portfolio-accent-soft);
+      color: var(--portfolio-accent);
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    #resume-section .resume-wrap h2 {
+      margin-top: 16px;
+      line-height: 1.3;
+    }
+
+    #resume-section .resume-wrap .position {
+      color: #c9c9c9;
+    }
+
+    #resume-section .resume-wrap p,
+    #resume-section .resume-wrap li {
+      color: var(--portfolio-muted);
+    }
+
+    #resume-section .resume-wrap ul {
+      margin-bottom: 0;
+      padding-left: 20px;
+    }
+
+    #resume-section .resume-wrap li {
+      margin-bottom: 8px;
+    }
+
+    #resume-section .education-grid > [class*="col-"] {
+      margin-bottom: 30px;
+    }
+
+    /* Projects */
+    #project-section {
+      position: relative;
+      background: linear-gradient(180deg, #050505 0%, #090909 100%);
+    }
+
+    #project-section .project-grid > [class*="col-"] {
+      margin-bottom: 30px;
+    }
+
+    #project-section .blog-entry {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      flex-direction: column;
+      border: 1px solid var(--portfolio-border);
+      border-radius: var(--portfolio-radius);
+      background: var(--portfolio-surface);
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.20);
+      transition: transform var(--portfolio-transition), border-color var(--portfolio-transition), box-shadow var(--portfolio-transition);
+    }
+
+    #project-section .blog-entry:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 189, 57, 0.24);
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.32);
+    }
+
+    #project-section .block-20 {
+      position: relative;
+      height: 290px;
+      margin: 0;
+      border-radius: 0;
+      background-position: center;
+      background-size: cover;
+      transition: transform 420ms ease, filter 420ms ease;
+    }
+
+    #project-section .blog-entry:hover .block-20 {
+      transform: scale(1.025);
+      filter: brightness(1.05);
+    }
+
+    .zoom-effect {
+      overflow: hidden;
+    }
+
+    .zoom-effect:hover {
+      transform: scale(1.025) !important;
+    }
+
+    #project-section .text {
+      display: flex !important;
+      flex: 1;
+      flex-direction: column;
+      margin-top: 0 !important;
+      padding: 26px 26px 28px;
+      float: none !important;
+    }
+
+    #project-section .heading {
+      margin-bottom: 14px;
+      line-height: 1.38;
+    }
+
+    #project-section .heading a {
+      color: #ffffff;
+      font-weight: 650;
+    }
+
+    #project-section .heading a:hover {
+      color: var(--portfolio-accent);
+    }
+
+    #project-section .text p {
+      margin-bottom: 0;
+      color: var(--portfolio-muted);
+      font-size: 0.96rem;
+      line-height: 1.75;
+    }
+
+    /* Contact */
+    #contact-section {
+      padding-bottom: 4.5rem;
+      background: #050505;
+    }
+
+    #contact-section .contact-info > [class*="col-"] {
+      margin-bottom: 24px;
+    }
+
+    #contact-section .box {
+      width: 100%;
+      border: 1px solid var(--portfolio-border);
+      border-radius: var(--portfolio-radius);
+      background: var(--portfolio-surface);
+      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
+      transition: transform var(--portfolio-transition), border-color var(--portfolio-transition);
+    }
+
+    #contact-section .box:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 189, 57, 0.24);
+    }
+
+    #contact-section .box .icon {
+      width: 74px;
+      height: 74px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background: var(--portfolio-accent-soft);
+    }
+
+    #contact-section .box .icon span {
+      color: var(--portfolio-accent);
+    }
+
+    #contact-section .box h3 {
+      color: #ffffff;
+      font-size: 1rem;
+    }
+
+    #contact-section .box p,
+    #contact-section .box a {
+      color: var(--portfolio-muted);
+      word-break: break-word;
+    }
+
+    #contact-section .box a:hover {
+      color: var(--portfolio-accent);
+    }
+
+    .ftco-footer-social li a {
+      display: inline-flex !important;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border: 1px solid var(--portfolio-border);
+      border-radius: 50%;
+      background: var(--portfolio-surface);
+      transition: transform var(--portfolio-transition), border-color var(--portfolio-transition), background var(--portfolio-transition);
+    }
+
+    .ftco-footer-social li a:hover {
+      transform: translateY(-3px);
+      border-color: rgba(255, 189, 57, 0.35);
+      background: var(--portfolio-accent-soft);
+    }
+
+    /* Scroll-to-top control */
+    #portfolio-scroll-top {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 999;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      padding: 0;
+      border: 1px solid rgba(255, 189, 57, 0.32);
+      border-radius: 50%;
+      background: rgba(16, 16, 16, 0.94);
+      color: var(--portfolio-accent);
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(10px);
+      transition: opacity var(--portfolio-transition), transform var(--portfolio-transition), background var(--portfolio-transition);
+      cursor: pointer;
+    }
+
+    #portfolio-scroll-top.is-visible {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    #portfolio-scroll-top:hover {
+      background: var(--portfolio-accent-soft);
+    }
+
+    /* Responsive refinements */
+    @media (max-width: 991.98px) {
+      #ftco-navbar {
+        background: rgba(5, 5, 5, 0.96) !important;
+      }
+
+      #home-section .slider-item,
+      #home-section .slider-text {
+        min-height: auto;
+      }
+
+      #home-section .slider-text {
+        padding-top: 118px;
+        padding-bottom: 72px;
+      }
+
+      #home-section .one-third.img {
+        min-height: 480px;
+        margin-top: 10px;
+      }
+
+      #home-section .one-forth .text {
+        padding-bottom: 20px;
+      }
+
+      #about-section .img-about > .overlay {
+        margin-bottom: 34px;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .ftco-section {
+        padding-top: 4.75rem;
+        padding-bottom: 4.75rem;
+      }
+
+      #home-section .slider-text {
+        padding-top: 102px;
+        text-align: left;
+      }
+
+      #home-section h1 {
+        font-size: clamp(2.5rem, 11vw, 4rem);
+      }
+
+      #home-section .one-third.img {
+        min-height: 390px;
+      }
+
+      #about-section .img-about > .overlay,
+      #resume-section .resume-wrap,
+      #project-section .text {
+        padding: 24px;
+      }
+
+      #about-section .about-info.mt-4 li {
+        flex-direction: column;
+      }
+
+      #about-section .about-info.mt-4 li > span:first-child {
+        flex-basis: auto;
+        margin-bottom: 2px;
+      }
+
+      #project-section .block-20 {
+        height: 235px;
+      }
+
+      #portfolio-scroll-top {
+        right: 16px;
+        bottom: 16px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar" aria-label="Primary navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Md. Siam Waliur Rahman</a>
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="oi oi-menu"></span> Menu
+      </button>
+
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+      <div class="slider-item">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+            <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);" role="img" aria-label="Portfolio hero image">
+              <div class="overlay"></div>
+            </div>
+
+            <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+              <div class="text">
+                <span class="subheading">Hi!</span>
+                <h1 class="mb-4 mt-3">I'm <span>Md. Siam Waliur Rahman</span></h1>
+                <span id="typing-animation" aria-live="polite"></span>
+                <h2>Data Analyst</h2>
+                <p class="mt-4 mb-0">
+                  <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4">My works (GitHub)</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    <div class="container">
+      <div class="row d-flex align-items-stretch">
+        <div class="col-md-6 col-lg-5 d-flex">
+          <div class="img-about img d-flex align-items-stretch">
+            <div class="overlay">
+              <div class="row align-items-center">
+                <div class="col-sm-6 col-md-5">
+                  <div class="about-img">
+                    <img src="images/about-me.png" class="img-fluid b-shadow-a" alt="Md Siam Waliur Rahman">
+                  </div>
+                </div>
+
+                <div class="col-sm-6 col-md-7">
+                  <div class="about-info">
+                    <p><span class="title-s">Name: </span> <span>Md Siam Waliur Rahman</span></p>
+                    <p><span class="title-s">Role: </span> <span>Data Analyst | Researcher</span></p>
+                    <p><span class="title-s">Experience: </span> <span>Project-Based Experience in Data Analytics &amp; Research</span></p>
+                    <p><span class="title-s">Address: </span> <span>Dhaka, Bangladesh</span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skill-mf">
+                <p class="title-s">Skills</p>
+
+                <span>PYTHON, R &amp; STATA</span> <span class="pull-right">90%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>Excel &amp; Power BI</span> <span class="pull-right">90%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>SQL</span> <span class="pull-right">80%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>Statistical Analysis</span> <span class="pull-right">95%</span>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+
+                <span>Machine Learning</span> <span class="pull-right">90%</span>
+                <div class="progress mb-0">
+                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-14">
-    <div class="resume-wrap ftco-animate">
-        <span class="date">2023–Present</span>
-        <h2>Business Intelligence & Data Visualization Projects</h2>
-        <span class="position">Project-Based Experience</span>
+        <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+          <div class="row justify-content-start pb-3">
+            <div class="col-md-12 heading-section ftco-animate">
+              <h1 class="big">About</h1>
+              <h2 class="mb-4">About Me</h2>
 
-        <p class="mt-4">
-            Hands-on experience developing dashboards, reports, and analytical solutions using business intelligence and data visualization tools.
-        </p>
+              <p>I am a Data Analyst and Researcher with experience in statistical data analysis, data visualization, and quantitative research. Through academic and independent projects, I have worked extensively with R, SPSS, Stata, Python, Excel, Power BI, and SQL to analyze complex datasets and generate actionable insights.</p>
 
-        <ul>
-            <li>Created interactive dashboards using Excel, Power BI and Tableau to visualize business and research data.</li>
+              <ul class="about-info mt-4 px-md-0 px-2">
+                <li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+                <li class="d-flex"><span>Domain:</span> <span>Data Science &amp; Business Intelligence</span></li>
+                <li class="d-flex"><span>Education:</span> <span>MS in Agricultural Statistics (BAU) | B.Sc. in Statistics (MBSTU)</span></li>
+                <li class="d-flex"><span>Language:</span> <span>English, Bangla</span></li>
+                <li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Excel &amp; Tableau</span></li>
+                <li class="d-flex"><span>Other Skills:</span> <span>R, Python, SPSS, Stata, SQL, Machine Learning &amp; Data Visualization</span></li>
+                <li class="d-flex"><span>Interest:</span> <span>Traveling, Photography, Drawing, Teaching, Singing</span></li>
+              </ul>
+            </div>
+          </div>
 
-            <li>Designed KPI monitoring systems and data storytelling reports to support data-driven decision making.</li>
-
-            <li>Developed data visualizations, charts, and performance reports for academic and independent projects.</li>
-
-            <li>Worked with Python, SQL, Excel, and spreadsheet-based analytics for data cleaning, transformation, and reporting.</li>
-
-            <li>Applied analytical techniques to business, public health, environmental, and social science datasets.</li>
-        </ul>
+          <div class="counter-wrap ftco-animate d-flex mt-md-3">
+            <div class="text">
+              <p class="mb-4">
+                <span class="number" data-number="8">0</span> <span>+</span>
+                <span>&nbsp; Projects completed</span>
+              </p>
+              <p class="mb-0">
+                <a href="http://www.linkedin.com/in/mdsiamwaliur" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-3">LinkedIn</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
-			</div>
+  </section>
 
-		<br>
-		<br>
+  <section class="ftco-section ftco-no-pb" id="resume-section">
+    <div class="container">
+      <div class="row justify-content-center pb-5">
+        <div class="col-md-10 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Resume</h1>
+          <h2 class="mb-4">Resume</h2>
+          <p>Data Analyst &amp; Researcher with expertise in statistics, data visualization, business intelligence, and quantitative research. Proficient in R, Python, SPSS, Stata, SQL, Power BI and Excel with hands-on experience gained through academic and project-based work. Passionate about leveraging data-driven insights to solve real-world problems and support informed decision-making</p>
+        </div>
+      </div>
 
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
+      <div class="row align-items-center mb-4">
+        <h1 class="big-4 mb-0">Experience</h1>
+        <div class="underline"></div>
+      </div>
 
-    <div class="col-md-6">
-        <div class="resume-wrap ftco-animate">
+      <div class="row">
+        <div class="col-md-12 mb-5">
+          <div class="resume-wrap ftco-animate">
+            <span class="date">2023–Present</span>
+            <h2>Business Intelligence &amp; Data Visualization Projects</h2>
+            <span class="position">Project-Based Experience</span>
+
+            <p class="mt-4">Hands-on experience developing dashboards, reports, and analytical solutions using business intelligence and data visualization tools.</p>
+
+            <ul>
+              <li>Created interactive dashboards using Excel, Power BI and Tableau to visualize business and research data.</li>
+              <li>Designed KPI monitoring systems and data storytelling reports to support data-driven decision making.</li>
+              <li>Developed data visualizations, charts, and performance reports for academic and independent projects.</li>
+              <li>Worked with Python, SQL, Excel, and spreadsheet-based analytics for data cleaning, transformation, and reporting.</li>
+              <li>Applied analytical techniques to business, public health, environmental, and social science datasets.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row align-items-center mb-4">
+        <h1 class="big-4 mb-0">Education</h1>
+        <div class="underline"></div>
+      </div>
+
+      <div class="row education-grid">
+        <div class="col-md-6 d-flex">
+          <div class="resume-wrap ftco-animate w-100">
             <span class="date">2024–2026</span>
             <h2>MS in Agricultural Statistics</h2>
             <span class="position">Bangladesh Agricultural University (BAU), Mymensingh</span>
-            <p class="mt-4">
-                Specialized in statistical modeling, research methodology, data analytics, survey analysis, advanced quantitative techniques,  and applied statistics.
-            </p>
+            <p class="mt-4">Specialized in statistical modeling, research methodology, data analytics, survey analysis, advanced quantitative techniques,  and applied statistics.</p>
+          </div>
         </div>
-    </div>
 
-    <div class="col-md-6">
-        <div class="resume-wrap ftco-animate">
+        <div class="col-md-6 d-flex">
+          <div class="resume-wrap ftco-animate w-100">
             <span class="date">2019–2023</span>
             <h2>B.Sc. in Statistics</h2>
             <span class="position">Mawlana Bhashani Science and Technology University (MBSTU), Tangail</span>
-            <p class="mt-4">
-                Studied probability, statistical inference, regression analysis, experimental design, data visualization, and applied statistics.
-            </p>
+            <p class="mt-4">Studied probability, statistical inference, regression analysis, experimental design, data visualization, and applied statistics.</p>
+          </div>
         </div>
-    </div>
+      </div>
 
-</div>
-
-    		<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<!-- <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p> -->
-    			</div>
-    		</div>
-    	</div>
-    </section>
-
-   
-
-<section class="ftco-section" id="project-section">
-  <div class="container">
-    
-    <div class="row justify-content-center mb-5 pb-5">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Projects</h1>
-        <h2 class="mb-4">Projects</h2>
-        <p>Featured Business Intelligence, Data Analytics, Healthcare Analytics and Dashboard Development projects using Power BI, Microsoft Excel, SQL and Python.</p>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-6 text-center ftco-animate"></div>
       </div>
     </div>
+  </section>
 
-    <div class="row d-flex">
-
-      <!-- Project 1 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Sales-analytics-dashboard-Power_BI"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/ecommerce-dashboard.png');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Sales-analytics-dashboard-Power_BI">
-                E-Commerce Sales Analytics Dashboard-Power BI
-              </a>
-            </h3>
-
-            <p>
-              End-to-end Power BI solution featuring RFM customer segmentation,
-              forecasting, KPI tracking, drill-through analysis, and customer insights.
-            </p>
-          </div>
+  <section class="ftco-section" id="project-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-4">
+        <div class="col-md-8 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Projects</h1>
+          <h2 class="mb-4">Projects</h2>
+          <p>Featured Business Intelligence, Data Analytics, Healthcare Analytics and Dashboard Development projects using Power BI, Microsoft Excel, SQL and Python.</p>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Hospital-analytics-dashboard-Power_BI"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/hospital-dashboard.png');">
-          </a>
+      <div class="row d-flex project-grid">
+        <!-- Project 1 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Sales-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/ecommerce-dashboard.png');" aria-label="E-Commerce Sales Analytics Dashboard-Power BI"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Sales-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer">E-Commerce Sales Analytics Dashboard-Power BI</a>
+              </h3>
+              <p>End-to-end Power BI solution featuring RFM customer segmentation, forecasting, KPI tracking, drill-through analysis, and customer insights.</p>
+            </div>
+          </article>
+        </div>
 
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Hospital-analytics-dashboard-Power_BI">
-                Hospital Monitoring Dashboard-Power BI
-              </a>
-            </h3>
+        <!-- Project 2 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Hospital-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/hospital-dashboard.png');" aria-label="Hospital Monitoring Dashboard-Power BI"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Hospital-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer">Hospital Monitoring Dashboard-Power BI</a>
+              </h3>
+              <p>Interactive healthcare analytics dashboard for monitoring patient demographics, hospital performance, treatment costs, and operational KPIs.</p>
+            </div>
+          </article>
+        </div>
 
-            <p>
-              Interactive healthcare analytics dashboard for monitoring patient demographics,
-              hospital performance, treatment costs, and operational KPIs.
-            </p>
-          </div>
+        <!-- Project 3 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Excel-hotel-management-dashboard-project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/hotel-dashboard.png');" aria-label="Hotel Management Dashboard-Excel"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Excel-hotel-management-dashboard-project" target="_blank" rel="noopener noreferrer">Hotel Management Dashboard-Excel</a>
+              </h3>
+              <p>Excel-based dashboard analyzing hotel bookings, revenue, cancellations, ADR metrics, lead times, and business performance.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Excel-dengue-analytics-dashboard-project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/dengue-dashboard.png');" aria-label="Dengue Report Analysis Dashboard-Excel"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Excel-dengue-analytics-dashboard-project" target="_blank" rel="noopener noreferrer">Dengue Report Analysis Dashboard-Excel</a>
+              </h3>
+              <p>Public health analytics dashboard for dengue surveillance, demographic analysis, diagnostic trends, and outbreak monitoring.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Music_Store_Analysis-SQL" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/sql-music-store-analysis.png');" aria-label="Music Store Database Analysis-SQL"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Music_Store_Analysis-SQL" target="_blank" rel="noopener noreferrer">Music Store Database Analysis-SQL</a>
+              </h3>
+              <p>SQL-based business analysis project exploring customer behavior, sales performance, revenue trends, and music store insights using advanced SQL queries and relational database concepts.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Sales-Analysis-using-Python" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Python.png');" aria-label="Sales Analysis Using Python"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Sales-Analysis-using-Python" target="_blank" rel="noopener noreferrer">Sales Analysis Using Python</a>
+              </h3>
+              <p>End-to-end retail sales analytics project utilizing Python, Pandas, NumPy, Matplotlib, and Seaborn to analyze customer demographics, purchasing behavior, product preferences, and regional sales performance through exploratory data analysis and data visualization.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Customer-Churn-Analysis-Predictive-Modeling-using-Python" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Customer_churn.png');" aria-label="Customer Churn Analysis: Predictive Modeling using Python"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Customer-Churn-Analysis-Predictive-Modeling-using-Python" target="_blank" rel="noopener noreferrer">Customer Churn Analysis: Predictive Modeling using Python</a>
+              </h3>
+              <p>Developed machine learning model to predict customer churn through data cleaning, exploratory data analysis, and classification techniques.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Customer-segmentation-RFM-using-SQL" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Customer_segmentation_sql.png');" aria-label="Sales and Customer Segmentation Analysis using SQL"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Customer-segmentation-RFM-using-SQL" target="_blank" rel="noopener noreferrer">Sales and Customer Segmentation Analysis using SQL</a>
+              </h3>
+              <p>Analyzed sales data using SQL to generate business insights on customer segmentation, sales performance, and product trends.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="col-md-6 d-flex ftco-animate">
+          <article class="blog-entry justify-content-end">
+            <a href="https://github.com/SiamWR/Household-survey-data-management-analysis-STATA" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Household Survey Data Management.png');" aria-label="Household Survey Data Analysis: Data Management and Analysis using STATA"></a>
+            <div class="text mt-3 float-right d-block">
+              <h3 class="heading">
+                <a href="https://github.com/SiamWR/Household-survey-data-management-analysis-STATA" target="_blank" rel="noopener noreferrer">Household Survey Data Analysis: Data Management and Analysis using STATA</a>
+              </h3>
+              <p>Developed a reproducible Stata workflow for cleaning, validating, and analyzing 41,544 household records, including missing-data assessment, consistency checks, socioeconomic indicator construction, descriptive analysis, visualization, and robust OLS regression.</p>
+            </div>
+          </article>
         </div>
       </div>
-
     </div>
+  </section>
 
-    <br>
+  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <div class="container">
+      <div class="row justify-content-center mb-5 pb-3">
+        <div class="col-md-7 heading-section text-center ftco-animate">
+          <h1 class="big big-2">Contact</h1>
+          <h2 class="mb-4">Contact Me</h2>
+          <p>Below are the details to reach out to me!</p>
+        </div>
+      </div>
 
-    <div class="row d-flex">
+      <div class="row d-flex contact-info mb-5 justify-content-center">
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-map-signs"></span>
+            </div>
+            <h3 class="mb-4">Address</h3>
+            <p>Dhaka, Bangladesh</p>
+          </div>
+        </div>
 
-      <!-- Project 3 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Excel-hotel-management-dashboard-project"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/hotel-dashboard.png');">
-          </a>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-phone2"></span>
+            </div>
+            <h3 class="mb-4">Contact Number</h3>
+            <p><a href="tel:+8801761110721">+880 1761-110721</a></p>
+          </div>
+        </div>
 
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Excel-hotel-management-dashboard-project">
-                Hotel Management Dashboard-Excel
-              </a>
-            </h3>
-
-            <p>
-              Excel-based dashboard analyzing hotel bookings, revenue,
-              cancellations, ADR metrics, lead times, and business performance.
-            </p>
+        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          <div class="align-self-stretch box p-4 text-center">
+            <div class="icon d-flex align-items-center justify-content-center">
+              <span class="icon-paper-plane"></span>
+            </div>
+            <h3 class="mb-4">Email Address</h3>
+            <p><a href="mailto:mdsiamwaliurrahman@gmail.com">mdsiamwaliurrahman@gmail.com</a></p>
           </div>
         </div>
       </div>
 
-      <!-- Project 4 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Excel-dengue-analytics-dashboard-project"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/dengue-dashboard.png');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Excel-dengue-analytics-dashboard-project">
-                Dengue Report Analysis Dashboard-Excel
+      <div class="row justify-content-center mb-5">
+        <div class="col-md-12 text-center">
+          <h4 class="mb-3">Find Me On</h4>
+          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center">
+            <li class="ftco-animate mx-2">
+              <a href="https://www.linkedin.com/in/mdsiamwaliur/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <span class="icon-linkedin"></span>
               </a>
-            </h3>
-
-            <p>
-              Public health analytics dashboard for dengue surveillance,
-              demographic analysis, diagnostic trends, and outbreak monitoring.
-            </p>
-          </div>
+            </li>
+            <li class="ftco-animate mx-2">
+              <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <span class="icon-github"></span>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-
-<br>
-		
- <div class="row d-flex">
-
-      <!-- Project 5 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Music_Store_Analysis-SQL"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/sql-music-store-analysis.png');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Music_Store_Analysis-SQL">
-                Music Store Database Analysis-SQL
-              </a>
-            </h3>
-
-            <p>
-              SQL-based business analysis project exploring customer behavior, sales performance, revenue trends, and music store insights using advanced SQL queries and relational database concepts.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Sales-Analysis-using-Python"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/Python.png');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Sales-Analysis-using-Python">
-               Sales Analysis Using Python
-              </a>
-            </h3>
-
-            <p>
-              End-to-end retail sales analytics project utilizing Python, Pandas, NumPy, Matplotlib, and Seaborn to analyze customer demographics, purchasing behavior, product preferences, and regional sales performance through exploratory data analysis and data visualization.
-            </p>
-          </div>
-        </div>
-      </div>
-<br>
-		
- <div class="row d-flex">
-
-      <!-- Project 7 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Customer-Churn-Analysis-Predictive-Modeling-using-Python"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/Customer_churn.png');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Customer-Churn-Analysis-Predictive-Modeling-using-Python">
-                Customer Churn Analysis: Predictive Modeling using Python
-              </a>
-            </h3>
-
-            <p>
-              Developed machine learning model to predict customer churn through data cleaning, exploratory data analysis, and classification techniques.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 8 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Customer-segmentation-RFM-using-SQL"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/Customer_segmentation_sql.png');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Customer-segmentation-RFM-using-SQL">
-               Sales and Customer Segmentation Analysis using SQL
-              </a>
-            </h3>
-
-            <p>
-             Analyzed sales data using SQL to generate business insights on customer segmentation, sales performance, and product trends.
-            </p>
-          </div>
-        </div>
-      </div>
-
- <br>
-	 
-	 <div class="row d-flex">
-
-      <!-- Project 9 -->
-      <div class="col-md-6 d-flex ftco-animate">
-        <div class="blog-entry justify-content-end">
-          <a href="https://github.com/SiamWR/Household-survey-data-management-analysis-STATA"
-             class="block-20 zoom-effect"
-             style="background-image: url('images/Household Survey Data Management.png');">
-          </a>
-
-          <div class="text mt-3 float-right d-block">
-            <h3 class="heading">
-              <a href="https://github.com/SiamWR/Household-survey-data-management-analysis-STATA">
-                Household Survey Data Analysis: Data Management and Analysis using STATA
-              </a>
-            </h3>
-
-            <p>
-              Developed a reproducible Stata workflow for cleaning, validating, and analyzing 41,544 household records, including missing-data assessment, consistency checks, socioeconomic indicator construction, descriptive analysis, visualization, and robust OLS regression.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
     </div>
+  </section>
 
+  <button id="portfolio-scroll-top" type="button" aria-label="Scroll to top">
+    <span class="oi oi-arrow-top"></span>
+  </button>
+
+  <div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px" aria-hidden="true">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle>
+    </svg>
   </div>
-</section>
-
-
-
-
-
-<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-  <div class="container">
-
-    <div class="row justify-content-center mb-5 pb-3">
-      <div class="col-md-7 heading-section text-center ftco-animate">
-        <h1 class="big big-2">Contact</h1>
-        <h2 class="mb-4">Contact Me</h2>
-        <p>Below are the details to reach out to me!</p>
-      </div>
-    </div>
-
-    <div class="row d-flex contact-info mb-5 justify-content-center">
-
-      <!-- Address -->
-      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-        <div class="align-self-stretch box p-4 text-center">
-          <div class="icon d-flex align-items-center justify-content-center">
-            <span class="icon-map-signs"></span>
-          </div>
-          <h3 class="mb-4">Address</h3>
-          <p>Dhaka, Bangladesh</p>
-        </div>
-      </div>
-
-      <!-- Phone -->
-      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-        <div class="align-self-stretch box p-4 text-center">
-          <div class="icon d-flex align-items-center justify-content-center">
-            <span class="icon-phone2"></span>
-          </div>
-          <h3 class="mb-4">Contact Number</h3>
-          <p>
-            <a href="tel:+8801761110721">+880 1761-110721</a>
-          </p>
-        </div>
-      </div>
-
-      <!-- Email -->
-      <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-        <div class="align-self-stretch box p-4 text-center">
-          <div class="icon d-flex align-items-center justify-content-center">
-            <span class="icon-paper-plane"></span>
-          </div>
-          <h3 class="mb-4">Email Address</h3>
-          <p>
-            <a href="mailto:mdsiamwaliurrahman@gmail.com">
-              mdsiamwaliurrahman@gmail.com
-            </a>
-          </p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Social Links -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-md-12 text-center">
-
-        <h4 class="mb-3">Find Me On</h4>
-
-        <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center">
-          
-          <li class="ftco-animate mx-2">
-            <a href="https://www.linkedin.com/in/mdsiamwaliur/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-              <span class="icon-linkedin"></span>
-            </a>
-          </li>
-
-          <li class="ftco-animate mx-2">
-            <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-              <span class="icon-github"></span>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -889,8 +1096,75 @@ section { position: relative; }
   <script src="js/aos.js"></script>
   <script src="js/jquery.animateNumber.min.js"></script>
   <script src="js/scrollax.min.js"></script>
-  
   <script src="js/main.js"></script>
-    
-  </body>
+
+  <script>
+    (function () {
+      const typingAnimationElement = document.getElementById('typing-animation');
+      const typingTexts = ['Statistician  ', 'Data Analyst  ', 'Researcher   '];
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (typingAnimationElement) {
+        if (reducedMotion) {
+          typingAnimationElement.textContent = typingTexts[0].trim();
+        } else {
+          let textIndex = 0;
+          let characterIndex = 0;
+          let deleting = false;
+
+          function typeLoop() {
+            const currentText = typingTexts[textIndex];
+
+            if (!deleting) {
+              characterIndex += 1;
+              typingAnimationElement.textContent = currentText.slice(0, characterIndex);
+
+              if (characterIndex >= currentText.length) {
+                deleting = true;
+                window.setTimeout(typeLoop, 900);
+                return;
+              }
+            } else {
+              characterIndex -= 1;
+              typingAnimationElement.textContent = currentText.slice(0, characterIndex);
+
+              if (characterIndex <= 0) {
+                deleting = false;
+                textIndex = (textIndex + 1) % typingTexts.length;
+              }
+            }
+
+            window.setTimeout(typeLoop, deleting ? 55 : 115);
+          }
+
+          typeLoop();
+        }
+      }
+
+      const scrollTopButton = document.getElementById('portfolio-scroll-top');
+
+      if (scrollTopButton) {
+        function updateScrollTopVisibility() {
+          scrollTopButton.classList.toggle('is-visible', window.scrollY > 650);
+        }
+
+        updateScrollTopVisibility();
+        window.addEventListener('scroll', updateScrollTopVisibility, { passive: true });
+
+        scrollTopButton.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+        });
+      }
+
+      document.querySelectorAll('#ftco-nav .nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          const nav = document.getElementById('ftco-nav');
+          if (window.innerWidth < 992 && nav && nav.classList.contains('show') && window.jQuery) {
+            window.jQuery(nav).collapse('hide');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
 </html>
