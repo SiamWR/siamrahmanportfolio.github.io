@@ -4,6 +4,8 @@
     <title>Md. Siam Waliur Rahman Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Portfolio of Md. Siam Waliur Rahman, Data Analyst and Researcher, featuring analytics, business intelligence, and research projects.">
+    <meta name="theme-color" content="#0b1120">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -26,89 +28,235 @@
 
 <style>
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+/* =========================================================
+   PORTFOLIO DESIGN REFRESH — preserves original content/data
+   ========================================================= */
+:root {
+  --portfolio-bg: #0b1120;
+  --portfolio-surface: #111b2e;
+  --portfolio-surface-2: #162238;
+  --portfolio-text: #e8eef8;
+  --portfolio-muted: #aab8ce;
+  --portfolio-accent: #f5b942;
+  --portfolio-accent-2: #6bd6c7;
+  --portfolio-border: rgba(181, 199, 226, .15);
+  --portfolio-shadow: 0 18px 48px rgba(0, 0, 0, .22);
 }
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body {
+  background: var(--portfolio-bg);
+  color: var(--portfolio-muted);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.75;
+  overflow-x: hidden;
 }
-
-.about-mf .about-img img {
-  margin-left: 10px;
+body, p, li { font-size: 15px; }
+p { color: var(--portfolio-muted); }
+a { transition: color .22s ease, background-color .22s ease, transform .22s ease, border-color .22s ease; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid var(--portfolio-accent-2);
+  outline-offset: 4px;
 }
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+.container { max-width: 1180px; }
+section { position: relative; }
+.ftco-section { padding: 100px 0; }
+.ftco-no-pb { padding-bottom: 45px; }
+.heading-section { max-width: 850px; margin-left: auto; margin-right: auto; }
+.heading-section h2, h2, h3, h4 { color: var(--portfolio-text); font-weight: 600; }
+.heading-section p { max-width: 760px; margin: 0 auto; }
+.heading-section .big {
+  color: rgba(232, 238, 248, .045);
+  font-weight: 800;
+  letter-spacing: .04em;
+  pointer-events: none;
 }
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
+.heading-section h2 { margin-bottom: 18px; }
+.heading-section h2:after {
   content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
+  display: block;
+  width: 54px;
+  height: 3px;
+  margin: 18px auto 0;
+  border-radius: 3px;
+  background: var(--portfolio-accent);
+}
+.ftco_navbar {
+  background: rgba(11, 17, 32, .88) !important;
+  border-bottom: 1px solid var(--portfolio-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 12px 0;
+}
+.navbar-brand { color: var(--portfolio-text) !important; font-weight: 700; letter-spacing: -.025em; }
+.navbar-nav .nav-link {
+  color: #c2cde0 !important;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 12px 14px !important;
+}
+.navbar-nav .nav-link:hover, .navbar-nav .active > .nav-link { color: var(--portfolio-accent) !important; }
+.navbar-toggler { border: 1px solid var(--portfolio-border); }
+.hero { background: radial-gradient(ellipse at 80% 30%, rgba(58, 91, 135, .23), transparent 45%); }
+.hero .slider-item { min-height: 690px; }
+.hero .slider-text { min-height: 690px; align-items: center !important; }
+.hero .one-third {
+  opacity: .72;
+  background-position: center top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: saturate(.82);
+}
+.hero .one-third .overlay { background: linear-gradient(90deg, var(--portfolio-bg), transparent 55%, rgba(11,17,32,.12)); }
+.hero .one-forth { min-height: 560px; }
+.hero .text { max-width: 660px; }
+.hero .subheading { color: var(--portfolio-accent); font-weight: 600; letter-spacing: .18em; text-transform: uppercase; font-size: 13px; }
+.hero h1 { color: var(--portfolio-text); font-size: clamp(2.5rem, 5.3vw, 4.65rem); font-weight: 700; line-height: 1.12; letter-spacing: -.045em; }
+.hero h1 span { color: var(--portfolio-accent); }
+.hero h2 { color: #d4deee; font-size: 1.15rem; font-weight: 500; }
+#typing-animation {
+  display: inline-block;
+  min-height: 1.8em;
+  color: var(--portfolio-accent-2);
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  font-weight: 600;
+  white-space: normal;
+}
+.btn { border-radius: 8px; font-size: 13px; font-weight: 600; letter-spacing: .015em; }
+.btn-primary { background: var(--portfolio-accent); border-color: var(--portfolio-accent); color: #172033 !important; }
+.btn-primary:hover { background: #ffd071; border-color: #ffd071; transform: translateY(-2px); }
+.btn-white.btn-outline-white { border: 1px solid rgba(232,238,248,.48) !important; color: var(--portfolio-text) !important; }
+.btn-white.btn-outline-white:hover { background: var(--portfolio-accent) !important; border-color: var(--portfolio-accent) !important; color: #172033 !important; }
+#about-section, #resume-section, #project-section, #contact-section { scroll-margin-top: 82px; }
+.about-mf .box-shadow-full { padding: 2rem; }
+.img-about { width: 100%; background: var(--portfolio-surface); border: 1px solid var(--portfolio-border); border-radius: 18px; overflow: hidden; box-shadow: var(--portfolio-shadow); }
+.img-about > .overlay { padding: 26px; background: transparent; }
+.about-img img { width: 100%; max-width: 150px; aspect-ratio: 1; object-fit: cover; border-radius: 14px !important; border: 2px solid rgba(245,185,66,.55); margin: 0 !important; }
+.about-info p { margin: 0 0 8px; font-size: 12px; overflow-wrap: anywhere; }
+.title-s { color: var(--portfolio-text); font-weight: 600; }
+.skill-mf { margin-top: 26px; }
+.skill-mf .title-s { margin-bottom: 18px; color: var(--portfolio-text); font-size: 17px; }
+.skill-mf > span { color: #dbe5f4; font-size: 12px; font-weight: 500; }
+.skill-mf .progress { height: 7px; margin: 8px 0 20px; border-radius: 20px; background: #26334a; overflow: hidden; }
+.skill-mf .progress .progress-bar { height: 100%; border-radius: 20px; background: linear-gradient(90deg, var(--portfolio-accent), var(--portfolio-accent-2)); }
+#about-section .heading-section { padding-top: 6px; }
+#about-section .heading-section h2 { text-align: left; }
+#about-section .heading-section h2:after { margin-left: 0; }
+#about-section .about-info li { border-bottom: 1px solid var(--portfolio-border); padding: 10px 0; gap: 12px; }
+#about-section .about-info li span:first-child { min-width: 100px; color: var(--portfolio-text); font-weight: 600; }
+#about-section .about-info li span:last-child { overflow-wrap: anywhere; }
+.counter-wrap { padding-top: 8px; }
+.counter-wrap .number { color: var(--portfolio-accent); font-size: 2.3rem; font-weight: 700; }
+#resume-section .row > h1.big-4 { color: var(--portfolio-text); font-size: 1.7rem; font-weight: 700; }
+.underline { width: 55px; height: 3px; margin: 12px 0 20px; background: var(--portfolio-accent); border-radius: 5px; }
+.resume-wrap {
   height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
+  padding: 28px;
+  background: var(--portfolio-surface);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
+.resume-wrap:hover { transform: translateY(-5px); border-color: rgba(245,185,66,.45); box-shadow: var(--portfolio-shadow); }
+.resume-wrap .date { display: inline-block; margin-bottom: 12px; color: var(--portfolio-accent); font-size: 12px; font-weight: 700; letter-spacing: .07em; }
+.resume-wrap h2 { font-size: 1.25rem; line-height: 1.45; }
+.resume-wrap .position { color: var(--portfolio-accent-2); font-size: 13px; font-weight: 500; }
+.resume-wrap ul { padding-left: 20px; }
+.resume-wrap li { margin: 8px 0; }
+#resume-section .col-md-14 { width: 100%; max-width: 100%; flex: 0 0 100%; }
+#project-section .row.d-flex { row-gap: 28px; }
+.blog-entry {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  transition: transform 0.3s ease-out;
+  background: var(--portfolio-surface);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.12);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
-
-.zoom-effect:hover {
-  transform: scale(1.1);
+.blog-entry:hover { transform: translateY(-6px); border-color: rgba(107,214,199,.4); box-shadow: var(--portfolio-shadow); }
+.blog-entry .block-20 {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 230px;
+  aspect-ratio: 16 / 9;
+  background-color: #1b2940;
+  background-position: center;
+  background-size: cover;
+  transition: background-size .35s ease, filter .25s ease;
 }
-
+.blog-entry:hover .block-20 { filter: saturate(1.12); }
+.zoom-effect:hover { transform: none; }
+.blog-entry .text { float: none !important; padding: 22px 23px 25px; margin: 0 !important; flex: 1; }
+.blog-entry .heading { margin: 0 0 12px; font-size: 1.12rem; line-height: 1.5; }
+.blog-entry .heading a { color: var(--portfolio-text); }
+.blog-entry .heading a:hover { color: var(--portfolio-accent); }
+.blog-entry p { margin-bottom: 0; font-size: 13px; line-height: 1.8; }
+#contact-section .contact-info { row-gap: 18px; }
+.contact-info .box {
+  width: 100%;
+  background: var(--portfolio-surface);
+  border: 1px solid var(--portfolio-border);
+  border-radius: 16px;
+  transition: transform .25s ease, border-color .25s ease;
+}
+.contact-info .box:hover { transform: translateY(-4px); border-color: rgba(245,185,66,.45); }
+.contact-info .icon { width: 58px; height: 58px; margin: 0 auto 18px; border-radius: 15px; background: rgba(245,185,66,.12); color: var(--portfolio-accent); font-size: 23px; }
+.contact-info h3 { font-size: 14px; font-weight: 600; }
+.contact-info p, .contact-info a { overflow-wrap: anywhere; font-size: 13px; }
+.contact-info a:hover { color: var(--portfolio-accent); }
+#contact-section h4 { color: var(--portfolio-text); }
+.ftco-footer-social a { background: var(--portfolio-surface-2); border: 1px solid var(--portfolio-border); }
+.ftco-footer-social a:hover { background: var(--portfolio-accent); color: #172033; transform: translateY(-3px); }
+#ftco-loader { background: var(--portfolio-bg); }
+@media (min-width: 992px) {
+  .hero .one-third { width: 48%; }
+  .hero .one-forth { width: 58%; }
+}
+@media (max-width: 991.98px) {
+  .ftco-section { padding: 76px 0; }
+  .hero .slider-item, .hero .slider-text { min-height: 620px; }
+  .hero .one-third { opacity: .35; width: 100%; }
+  .hero .one-forth { width: 100%; min-height: 560px; }
+  .hero .text { padding: 35px 0; }
+  .ftco_navbar { background: #0b1120 !important; }
+  .navbar-collapse { padding-top: 10px; }
+}
+@media (max-width: 767.98px) {
+  .ftco-section { padding: 62px 0; }
+  .hero .slider-item, .hero .slider-text { min-height: 590px; }
+  .hero .one-forth { min-height: 530px; }
+  .hero h1 { font-size: clamp(2.15rem, 9vw, 3.2rem); }
+  .hero .text { padding: 30px 8px; }
+  .img-about > .overlay { padding: 20px; }
+  .about-img img { max-width: 125px; }
+  #about-section .heading-section { margin-top: 42px; }
+  #about-section .about-info li { align-items: flex-start !important; }
+  #about-section .about-info li span:first-child { min-width: 86px; }
+  .resume-wrap { padding: 23px; }
+  .blog-entry .block-20 { min-height: 190px; }
+}
+@media (max-width: 420px) {
+  .navbar-brand { max-width: 235px; white-space: normal; font-size: 15px; line-height: 1.35; }
+  .hero .slider-item, .hero .slider-text { min-height: 550px; }
+  .hero .one-forth { min-height: 500px; }
+  .btn { padding: 12px 16px !important; }
+  .about-img img { max-width: 105px; }
+}
+/* Respect reduced-motion preferences for visitors who disable animation. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 </style>
 
@@ -153,37 +301,44 @@
 						<span id="typing-animation"></span>
 
 						<script>
+(function () {
+  const element = document.getElementById("typing-animation");
+  if (!element) return;
 
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
+  const roles = ["Statistician", "Data Analyst", "Researcher"];
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let roleIndex = 0;
+  let characterIndex = 0;
+  let deleting = false;
 
-						// Create an array of typing text
-						const typingTexts = [
-						'Statistitian  ',
-						'Data Analyst  ',
-						'Researcher   ',
-						];
+  function typeNext() {
+    if (reducedMotion) {
+      element.textContent = roles[0];
+      return;
+    }
 
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
+    const currentRole = roles[roleIndex];
+    element.textContent = currentRole.slice(0, characterIndex);
 
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
+    if (!deleting && characterIndex < currentRole.length) {
+      characterIndex++;
+      window.setTimeout(typeNext, 95);
+    } else if (!deleting) {
+      deleting = true;
+      window.setTimeout(typeNext, 1250);
+    } else if (characterIndex > 0) {
+      characterIndex--;
+      window.setTimeout(typeNext, 45);
+    } else {
+      deleting = false;
+      roleIndex = (roleIndex + 1) % roles.length;
+      window.setTimeout(typeNext, 260);
+    }
+  }
 
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
+  typeNext();
+})();
+</script>
 
 						<br>
 						<br>
@@ -212,7 +367,7 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-5">
 									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="Portrait of Md. Siam Waliur Rahman">
 									  </div>
 									</div>
 									<!-- Details next to profile image -->
@@ -330,7 +485,7 @@
         </p>
 
         <ul>
-            <li>Created interactive dashboards using Excel, Power BI and Tableu to visualize business and research data.</li>
+            <li>Created interactive dashboards using Excel, Power BI and Tableau to visualize business and research data.</li>
 
             <li>Designed KPI monitoring systems and data storytelling reports to support data-driven decision making.</li>
 
@@ -694,13 +849,13 @@
         <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center">
           
           <li class="ftco-animate mx-2">
-            <a href="https://www.linkedin.com/in/mdsiamwaliur/" target="_blank">
+            <a href="https://www.linkedin.com/in/mdsiamwaliur/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
               <span class="icon-linkedin"></span>
             </a>
           </li>
 
           <li class="ftco-animate mx-2">
-            <a href="https://github.com/SiamWR" target="_blank">
+            <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
               <span class="icon-github"></span>
             </a>
           </li>
