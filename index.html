@@ -483,6 +483,114 @@
       line-height: 1.75;
     }
 
+
+    /* Technology filters: scoped to the existing Projects section. */
+    #project-section .project-filter-panel {
+      margin: -12px 0 32px;
+    }
+
+    #project-section .project-filter-panel[hidden],
+    #project-section .project-item[hidden] {
+      display: none !important; /* Overrides Bootstrap's d-flex utility. */
+    }
+
+    #project-section .project-filters {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    #project-section .project-filter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 46px;
+      max-width: 100%;
+      padding: 10px 18px;
+      border: 1px solid var(--portfolio-border);
+      border-radius: 999px;
+      background: var(--portfolio-surface);
+      color: var(--portfolio-text);
+      font: inherit;
+      font-size: 0.9rem;
+      font-weight: 600;
+      line-height: 1.4;
+      cursor: pointer;
+      transition: background var(--portfolio-transition),
+                  color var(--portfolio-transition),
+                  border-color var(--portfolio-transition),
+                  transform var(--portfolio-transition);
+    }
+
+    #project-section .project-filter:hover {
+      border-color: var(--portfolio-accent);
+      background: var(--portfolio-accent-soft);
+      transform: translateY(-2px);
+    }
+
+    #project-section .project-filter[aria-pressed="true"] {
+      border-color: var(--portfolio-accent);
+      background: var(--portfolio-accent);
+      color: var(--portfolio-bg);
+    }
+
+    #project-section .project-filter-count {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 24px;
+      height: 24px;
+      padding: 0 6px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.09);
+      font-size: 0.78rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #project-section .project-filter[aria-pressed="true"] .project-filter-count {
+      background: rgba(5, 5, 5, 0.12);
+    }
+
+    #project-section .project-filter-status {
+      margin: 16px 0 0;
+      color: var(--portfolio-muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    #project-section .project-item {
+      min-width: 0;
+    }
+
+    /* Keep revealed cards visible after filtering, independently of scroll animations. */
+    #project-section .project-grid.has-filtered .project-item {
+      opacity: 1;
+      visibility: visible;
+      animation: none;
+    }
+
+    #project-section .project-item .block-20 {
+      flex-shrink: 0;
+    }
+
+    #project-section .project-item .heading,
+    #project-section .project-item .text p {
+      overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 575.98px) {
+      #project-section .project-filters {
+        gap: 8px;
+      }
+
+      #project-section .project-filter {
+        padding: 10px 13px;
+        font-size: 0.82rem;
+      }
+    }
+
     /* Contact */
     #contact-section {
       padding-bottom: 4.5rem;
@@ -890,9 +998,37 @@
         </div>
       </div>
 
-      <div class="row d-flex project-grid">
+      <!-- Native buttons support Tab, Enter and Space; all cards remain available without filtering. -->
+      <div class="project-filter-panel" id="project-filter-panel" hidden>
+        <div class="project-filters" role="group" aria-label="Filter projects by technology">
+          <button class="project-filter" type="button" data-filter="all" aria-pressed="true" aria-controls="portfolio-project-grid">
+            <span>All Projects</span><span class="project-filter-count" aria-hidden="true"></span>
+          </button>
+          <button class="project-filter" type="button" data-filter="python" aria-pressed="false" aria-controls="portfolio-project-grid">
+            <span>Python</span><span class="project-filter-count" aria-hidden="true"></span>
+          </button>
+          <button class="project-filter" type="button" data-filter="sql" aria-pressed="false" aria-controls="portfolio-project-grid">
+            <span>SQL</span><span class="project-filter-count" aria-hidden="true"></span>
+          </button>
+          <button class="project-filter" type="button" data-filter="power-bi" aria-pressed="false" aria-controls="portfolio-project-grid">
+            <span>Power BI</span><span class="project-filter-count" aria-hidden="true"></span>
+          </button>
+          <button class="project-filter" type="button" data-filter="excel" aria-pressed="false" aria-controls="portfolio-project-grid">
+            <span>Microsoft Excel</span><span class="project-filter-count" aria-hidden="true"></span>
+          </button>
+          <button class="project-filter" type="button" data-filter="stata" aria-pressed="false" aria-controls="portfolio-project-grid">
+            <span>Stata</span><span class="project-filter-count" aria-hidden="true"></span>
+          </button>
+          <button class="project-filter" type="button" data-filter="machine-learning" aria-pressed="false" aria-controls="portfolio-project-grid">
+            <span>Machine Learning</span><span class="project-filter-count" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="project-filter-status" id="project-filter-status" role="status" aria-live="polite" aria-atomic="true"></p>
+      </div>
+
+      <div class="row d-flex project-grid" id="portfolio-project-grid">
         <!-- Project 1 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="power-bi">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Sales-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/ecommerce-dashboard.png');" aria-label="E-Commerce Sales Analytics Dashboard-Power BI"></a>
             <div class="text mt-3 float-right d-block">
@@ -905,7 +1041,7 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="power-bi">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Hospital-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/hospital-dashboard.png');" aria-label="Hospital Monitoring Dashboard-Power BI"></a>
             <div class="text mt-3 float-right d-block">
@@ -918,7 +1054,7 @@
         </div>
 
         <!-- Project 3 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="excel">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Excel-hotel-management-dashboard-project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/hotel-dashboard.png');" aria-label="Hotel Management Dashboard-Excel"></a>
             <div class="text mt-3 float-right d-block">
@@ -931,7 +1067,7 @@
         </div>
 
         <!-- Project 4 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="excel">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Excel-dengue-analytics-dashboard-project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/dengue-dashboard.png');" aria-label="Dengue Report Analysis Dashboard-Excel"></a>
             <div class="text mt-3 float-right d-block">
@@ -944,7 +1080,7 @@
         </div>
 
         <!-- Project 5 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="sql">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Music_Store_Analysis-SQL" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/sql-music-store-analysis.png');" aria-label="Music Store Database Analysis-SQL"></a>
             <div class="text mt-3 float-right d-block">
@@ -957,7 +1093,7 @@
         </div>
 
         <!-- Project 6 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="python">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Sales-Analysis-using-Python" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Python.png');" aria-label="Sales Analysis Using Python"></a>
             <div class="text mt-3 float-right d-block">
@@ -970,7 +1106,7 @@
         </div>
 
         <!-- Project 7 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="python machine-learning">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Customer-Churn-Analysis-Predictive-Modeling-using-Python" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Customer_churn.png');" aria-label="Customer Churn Analysis: Predictive Modeling using Python"></a>
             <div class="text mt-3 float-right d-block">
@@ -983,7 +1119,7 @@
         </div>
 
         <!-- Project 8 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="sql">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Customer-segmentation-RFM-using-SQL" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Customer_segmentation_sql.png');" aria-label="Sales and Customer Segmentation Analysis using SQL"></a>
             <div class="text mt-3 float-right d-block">
@@ -996,7 +1132,7 @@
         </div>
 
         <!-- Project 9 -->
-        <div class="col-md-6 d-flex ftco-animate">
+        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="stata">
           <article class="blog-entry justify-content-end">
             <a href="https://github.com/SiamWR/Household-survey-data-management-analysis-STATA" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Household Survey Data Management.png');" aria-label="Household Survey Data Analysis: Data Management and Analysis using STATA"></a>
             <div class="text mt-3 float-right d-block">
@@ -1164,6 +1300,90 @@
           }
         });
       });
+    })();
+  </script>
+
+  <script>
+    // Filter the original cards in place; their content and links are never rebuilt.
+    (function () {
+      'use strict';
+
+      const section = document.getElementById('project-section');
+      if (!section) return;
+
+      const panel = section.querySelector('#project-filter-panel');
+      const grid = section.querySelector('#portfolio-project-grid');
+      const status = section.querySelector('#project-filter-status');
+      const buttons = Array.from(section.querySelectorAll('.project-filter'));
+      const cards = Array.from(section.querySelectorAll('.project-item'));
+      if (!panel || !grid || !status || !buttons.length || !cards.length) return;
+
+      const categories = new Map(cards.map(function (card) {
+        return [card, (card.dataset.categories || '').split(/\s+/).filter(Boolean)];
+      }));
+      const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let activeFilter = 'all';
+      let transition = null;
+
+      function matches(card, category) {
+        return category === 'all' || categories.get(card).includes(category);
+      }
+
+      function updateStatus(category, count) {
+        const button = buttons.find(function (item) {
+          return item.dataset.filter === category;
+        });
+        const label = button.querySelector('span').textContent;
+        status.textContent = category === 'all'
+          ? 'Showing all ' + count + ' projects'
+          : label + ': showing ' + count + ' of ' + cards.length + ' projects';
+      }
+
+      function filterProjects(category) {
+        if (category === activeFilter) return;
+        activeFilter = category;
+        if (transition) {
+          transition.cancel();
+          transition = null;
+        }
+
+        let visibleCount = 0;
+        cards.forEach(function (card) {
+          const visible = matches(card, category);
+          card.hidden = !visible;
+          if (visible) visibleCount += 1;
+        });
+
+        buttons.forEach(function (button) {
+          button.setAttribute('aria-pressed', String(button.dataset.filter === category));
+        });
+        grid.classList.add('has-filtered');
+        updateStatus(category, visibleCount);
+
+        // One cancellable fade avoids queued transitions during rapid clicks.
+        if (!motionPreference.matches && typeof grid.animate === 'function') {
+          transition = grid.animate(
+            [{ opacity: 0.45 }, { opacity: 1 }],
+            { duration: 220, easing: 'ease-out' }
+          );
+        }
+
+        // Refresh existing scroll/section measurements after the grid changes height.
+        window.dispatchEvent(new Event('resize'));
+        if (window.jQuery && window.jQuery.fn.scrollspy) {
+          window.jQuery('body').scrollspy('refresh');
+        }
+      }
+
+      buttons.forEach(function (button) {
+        const category = button.dataset.filter;
+        const count = cards.filter(function (card) { return matches(card, category); }).length;
+        button.querySelector('.project-filter-count').textContent = String(count);
+        button.addEventListener('click', function () { filterProjects(category); });
+      });
+
+      updateStatus('all', cards.length);
+      panel.hidden = false;
     })();
   </script>
 </body>
