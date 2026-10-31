@@ -818,8 +818,45 @@
               <div class="text">
                 <span class="subheading">Hi!</span>
                 <h1 class="mb-4 mt-3">I'm <span>Md. Siam Waliur Rahman</span></h1>
-                <span id="typing-animation" aria-live="polite"></span>
-                <h2>Data Analyst</h2>
+                <!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Statistics & Research  ',
+						'Data Analytics  ',
+						'Data Science  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Data Analytics</h2>
                 <p class="mt-4 mb-0">
                   <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4">My works (GitHub)</a>
                 </p>
