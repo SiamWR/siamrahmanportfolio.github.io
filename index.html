@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
   <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -29,153 +30,48 @@
       --teal: #225f62;
       --serif: Georgia, "Times New Roman", serif;
     }
-
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--body);
-      font: 400 1rem/1.75 Poppins, system-ui, sans-serif;
-    }
+    body { margin: 0; background: var(--paper); color: var(--body); font: 400 1rem/1.75 Poppins, system-ui, sans-serif; }
     .container { width: min(92%, 1120px); max-width: 1120px; margin-inline: auto; }
     a { text-underline-offset: .24em; }
     :is(a, button):focus-visible { outline: 3px solid #b56e23 !important; outline-offset: 3px; }
     section.ftco-section { padding-block: clamp(3.75rem, 7vw, 6rem); }
-
-    .heading-section h1.big, .heading-section h1.big.big-2 {
-      position: static;
-      transform: none;
-      opacity: 1;
-      margin: 0 0 .7rem;
-      color: var(--teal);
-      font: 650 .76rem/1.5 Poppins, sans-serif;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-    }
-    .heading-section h2, .big-4 {
-      color: var(--ink);
-      font: 400 clamp(2.1rem, 4vw, 3.15rem)/1.15 var(--serif);
-      letter-spacing: -.035em;
-    }
+    .heading-section h1.big, .heading-section h1.big.big-2 { position: static; transform: none; opacity: 1; margin: 0 0 .7rem; color: var(--teal); font: 650 .76rem/1.5 Poppins, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    .heading-section h2, .big-4 { color: var(--ink); font: 400 clamp(2.1rem, 4vw, 3.15rem)/1.15 var(--serif); letter-spacing: -.035em; }
     .heading-section > p { margin-inline: auto; max-width: 74ch; color: var(--body); }
-
-    #ftco-navbar, #ftco-navbar.scrolled, #ftco-navbar.awake {
-      background: var(--navy) !important;
-      border-bottom: 1px solid #425164;
-    }
+    #ftco-navbar, #ftco-navbar.scrolled, #ftco-navbar.awake { background: var(--navy) !important; border-bottom: 1px solid #425164; }
     #ftco-navbar { padding-block: .65rem; }
-    #ftco-navbar .navbar-brand {
-      color: #fffaf0 !important;
-      font: 600 clamp(1.02rem, 1.8vw, 1.3rem)/1.4 var(--serif);
-      white-space: normal;
-    }
+    #ftco-navbar .navbar-brand { color: #fffaf0 !important; font: 600 clamp(1.02rem, 1.8vw, 1.3rem)/1.4 var(--serif); white-space: normal; }
     #ftco-navbar .nav-link, #ftco-navbar .navbar-toggler { color: #edf2f3 !important; }
     #ftco-navbar .nav-link { font-size: .9rem; }
     #ftco-navbar .nav-link span::before { background: var(--brass); }
-    #ftco-navbar .nav-link:hover, #ftco-navbar .active > .nav-link,
-    #ftco-navbar .nav-link.active { color: var(--brass) !important; }
+    #ftco-navbar .nav-link:hover, #ftco-navbar .active > .nav-link, #ftco-navbar .nav-link.active { color: var(--brass) !important; }
 
     /* The portrait keeps its original background image and carousel position. */
-    #home-section {
-      color: white;
-      background: radial-gradient(ellipse at 77% 62%, #354e60, transparent 55%), var(--navy);
-    }
+    #home-section { color: white; background: radial-gradient(ellipse at 77% 62%, #354e60, transparent 55%), var(--navy); }
     #home-section .slider-item { height: auto !important; min-height: 0; background: transparent; }
-    #home-section .slider-text {
-      display: grid !important;
-      grid-template-columns: 1.05fr 1fr;
-      align-items: center !important;
-      gap: 4%;
-      height: auto !important;
-      min-height: 0;
-      padding-block: clamp(6.5rem, 10vw, 9rem) clamp(2.5rem, 5vw, 4rem);
-    }
-    #home-section .one-third.img {
-      grid-area: 1 / 2;
-      position: relative;
-      inset: auto;
-      order: 0;
-      width: 100%;
-      height: auto !important;
-      aspect-ratio: 1.08;
-      align-self: end;
-      background-size: contain;
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      border-bottom: 1px solid #8f9b9f;
-    }
-    #home-section .one-forth {
-      grid-area: 1 / 1;
-      position: relative;
-      inset: auto;
-      width: 100%;
-      min-width: 0;
-    }
-    #home-section .one-forth .text {
-      position: static;
-      width: 100%;
-      max-width: 35rem;
-      padding: 0;
-      text-align: left;
-    }
+    #home-section .slider-text { display: grid !important; grid-template-columns: 1.05fr 1fr; align-items: center !important; gap: 4%; height: auto !important; min-height: 0; padding-block: clamp(6.5rem, 10vw, 9rem) clamp(2.5rem, 5vw, 4rem); }
+    #home-section .one-third.img { grid-area: 1 / 2; position: relative; inset: auto; order: 0; width: 100%; height: auto !important; aspect-ratio: 1.08; align-self: end; background-size: contain; background-position: center bottom; background-repeat: no-repeat; border-bottom: 1px solid #8f9b9f; }
+    #home-section .one-forth { grid-area: 1 / 1; position: relative; inset: auto; width: 100%; min-width: 0; }
+    #home-section .one-forth .text { position: static; width: 100%; max-width: 35rem; padding: 0; text-align: left; }
     #home-section .overlay { background: transparent; }
     #home-section .subheading { color: var(--brass); font-size: .82rem; font-weight: 600; letter-spacing: .14em; }
-    #home-section h1 {
-      color: #fcfaf4;
-      font: 400 clamp(2.65rem, 5vw, 4.3rem)/1.08 var(--serif);
-      letter-spacing: -.045em;
-    }
+    #home-section h1 { color: #fcfaf4; font: 400 clamp(2.65rem, 5vw, 4.3rem)/1.08 var(--serif); letter-spacing: -.045em; }
     #home-section h1 span { color: inherit; }
-    #typing-animation {
-      display: inline-block;
-      min-height: 1.6em;
-      color: var(--brass);
-      font-size: clamp(1rem, 1.7vw, 1.25rem);
-      font-weight: 600;
-    }
+    #typing-animation { display: inline-block; min-height: 1.6em; color: var(--brass); font-size: clamp(1rem, 1.7vw, 1.25rem); font-weight: 600; }
     #home-section h2 { color: #e0e7eb; font: 400 1.1rem/1.5 Poppins, sans-serif; }
-    #home-section .btn, #about-section .btn {
-      border-radius: .35rem;
-      font-size: .85rem;
-      font-weight: 600;
-      letter-spacing: .015em;
-      text-transform: none;
-    }
-    #home-section .btn.btn-outline-white {
-      background: var(--brass);
-      border: 1px solid var(--brass) !important;
-      color: var(--navy) !important;
-    }
+    #home-section .btn, #about-section .btn { border-radius: .35rem; font-size: .85rem; font-weight: 600; letter-spacing: .015em; text-transform: none; }
+    #home-section .btn.btn-outline-white { background: var(--brass); border: 1px solid var(--brass) !important; color: var(--navy) !important; }
     #home-section .btn:hover { background: #f0dcba; }
-    #about-section .btn.btn-primary {
-      background: var(--teal);
-      color: white !important;
-      border-color: var(--teal) !important;
-    }
+    #about-section .btn.btn-primary { background: var(--teal); color: white !important; border-color: var(--teal) !important; }
 
     #about-section .img-about { width: 100%; align-self: start; }
-    #about-section .img-about > .overlay {
-      position: static;
-      width: 100%;
-      height: auto;
-      opacity: 1;
-      padding: clamp(1.25rem, 2.6vw, 2rem);
-      background: var(--mist);
-      border: 1px solid var(--rule);
-      border-radius: .6rem;
-    }
+    #about-section .img-about > .overlay { position: static; width: 100%; height: auto; opacity: 1; padding: clamp(1.25rem, 2.6vw, 2rem); background: var(--mist); border: 1px solid var(--rule); border-radius: .6rem; }
     .about-img img { display: block; max-width: 100%; height: auto; margin: 0; border-radius: .4rem; }
     .about-info p { margin-bottom: .65rem; }
     .title-s, #about-section .about-info li span:first-child { color: var(--ink); font-weight: 600; }
-    #about-section .about-info li {
-      display: grid !important;
-      grid-template-columns: 6.4rem minmax(0, 1fr);
-      gap: .55rem;
-      padding: .6rem 0;
-      margin: 0;
-      border-bottom: 1px solid var(--rule);
-    }
+    #about-section .about-info li { display: grid !important; grid-template-columns: 6.4rem minmax(0, 1fr); gap: .55rem; padding: .6rem 0; margin: 0; border-bottom: 1px solid var(--rule); }
     #about-section .about-info li span { width: auto; color: var(--body); }
     #about-section .heading-section p { margin-left: 0; }
     #about-section .counter-wrap .text p, #about-section .about-info p { color: var(--body); }
@@ -189,93 +85,32 @@
     #resume-section .heading-section > p:first-of-type { color: var(--teal); font-weight: 600; }
     #resume-section .big-4 { font-size: 1.9rem; }
     .underline { width: 3rem; height: 2px; margin: .7rem auto 0; background: #a88858; }
-    #resume-section .resume-wrap {
-      width: 100%;
-      margin: 0;
-      padding: clamp(1.3rem, 3vw, 2.2rem);
-      background: var(--paper);
-      border: 1px solid var(--rule);
-      border-radius: .5rem;
-    }
-    #resume-section .resume-wrap h2 {
-      margin: .4rem 0;
-      color: var(--ink);
-      font: 400 clamp(1.45rem, 2.5vw, 2rem)/1.22 var(--serif);
-    }
+    #resume-section .resume-wrap { width: 100%; margin: 0; padding: clamp(1.3rem, 3vw, 2.2rem); background: var(--paper); border: 1px solid var(--rule); border-radius: .5rem; }
+    #resume-section .resume-wrap h2 { margin: .4rem 0; color: var(--ink); font: 400 clamp(1.45rem, 2.5vw, 2rem)/1.22 var(--serif); }
     #resume-section .date { color: var(--teal); font: 650 .87rem/1.5 Poppins, sans-serif; }
     #resume-section .position { color: #516270; font-size: .93rem; text-transform: none; letter-spacing: 0; }
     .resume-wrap ul { margin: .8rem 0 0; padding-left: 1.2rem; }
     .resume-wrap li + li { margin-top: .35rem; }
     .education-grid > div { margin-bottom: 1rem; }
-
     @media (min-width: 992px) {
-      #resume-section .col-md-12 > .resume-wrap {
-        display: grid;
-        grid-template-columns: 9rem minmax(0, 1fr);
-        column-gap: 2rem;
-      }
+      #resume-section .col-md-12 > .resume-wrap { display: grid; grid-template-columns: 9rem minmax(0, 1fr); column-gap: 2rem; }
       #resume-section .col-md-12 > .resume-wrap > * { grid-column: 2; }
-      #resume-section .col-md-12 > .resume-wrap > .date {
-        grid-column: 1;
-        grid-row: 1 / 3;
-        padding-top: .6rem;
-      }
+      #resume-section .col-md-12 > .resume-wrap > .date { grid-column: 1; grid-row: 1 / 3; padding-top: .6rem; }
     }
 
     #project-section { background: var(--paper); }
     .project-filters { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; }
-    .project-filter {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      min-height: 44px;
-      padding: .5rem .85rem;
-      border: 1px solid #b7c3c7;
-      border-radius: 2rem;
-      background: white;
-      color: var(--ink);
-      font: 500 .88rem/1.3 Poppins, sans-serif;
-      cursor: pointer;
-    }
+    .project-filter { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .5rem .85rem; border: 1px solid #b7c3c7; border-radius: 2rem; background: white; color: var(--ink); font: 500 .88rem/1.3 Poppins, sans-serif; cursor: pointer; }
     .project-filter:hover { border-color: var(--teal); }
     .project-filter[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: white; }
-    .project-filter-count {
-      min-width: 1.4rem;
-      padding: .14rem .3rem;
-      border-radius: 1rem;
-      background: #e6edee;
-      color: var(--ink);
-      font-size: .76rem;
-      font-variant-numeric: tabular-nums;
-    }
+    .project-filter-count { min-width: 1.4rem; padding: .14rem .3rem; border-radius: 1rem; background: #e6edee; color: var(--ink); font-size: .76rem; font-variant-numeric: tabular-nums; }
     .project-filter-status { margin: .9rem 0 1.8rem; text-align: center; color: var(--body); font-size: .88rem; }
     #project-section [hidden] { display: none !important; }
     .project-grid.has-filtered .project-item { opacity: 1; visibility: visible; animation: none; }
     .project-item { min-width: 0; margin-bottom: 1.6rem; }
-    #project-section .blog-entry {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start !important;
-      width: 100%;
-      margin: 0;
-      background: white;
-      border: 1px solid var(--rule);
-      border-radius: .55rem;
-      transition: border-color .18s ease, box-shadow .18s ease;
-    }
-    #project-section .blog-entry:is(:hover, :focus-within) {
-      border-color: #899eaa;
-      box-shadow: 0 5px 18px #1024370d;
-    }
-    #project-section .block-20 {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-      background: #e8edef center / contain no-repeat;
-      border-bottom: 1px solid var(--rule);
-      border-radius: .55rem .55rem 0 0;
-    }
+    #project-section .blog-entry { display: flex; flex-direction: column; justify-content: flex-start !important; width: 100%; margin: 0; background: white; border: 1px solid var(--rule); border-radius: .55rem; transition: border-color .18s ease, box-shadow .18s ease; }
+    #project-section .blog-entry:is(:hover, :focus-within) { border-color: #899eaa; box-shadow: 0 5px 18px #1024370d; }
+    #project-section .block-20 { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #e8edef center / contain no-repeat; border-bottom: 1px solid var(--rule); border-radius: .55rem .55rem 0 0; }
     #project-section .blog-entry .text { width: 100%; margin: 0 !important; padding: clamp(1.1rem, 2.5vw, 1.8rem); }
     #project-section .heading { margin: 0 0 .7rem; font-size: clamp(1.12rem, 2vw, 1.36rem); font-weight: 600; line-height: 1.4; }
     #project-section .heading a { color: var(--ink); }
@@ -288,32 +123,13 @@
     #contact-section .heading-section p { color: #d3dce1; }
     #contact-section .contact-info > div { margin-bottom: 1rem; }
     #contact-section .box { width: 100%; background: #21364b; border: 1px solid #41576a; border-radius: .55rem; }
-    #contact-section .box .icon {
-      width: 3.3rem;
-      height: 3.3rem;
-      margin: 0 auto 1rem;
-      border-radius: 50%;
-      background: #30485a;
-    }
+    #contact-section .box .icon { width: 3.3rem; height: 3.3rem; margin: 0 auto 1rem; border-radius: 50%; background: #30485a; }
     #contact-section .box .icon span { color: var(--brass); font-size: 1.35rem; }
     #contact-section .box h3 { font-size: 1rem; letter-spacing: 0; text-transform: none; }
     #contact-section .box p { margin: 0; }
     #contact-section .box a { overflow-wrap: anywhere; text-decoration: underline; }
     #contact-section .ftco-footer-social a { background: #30485a; color: var(--brass); }
-    #portfolio-scroll-top {
-      position: fixed;
-      right: 1rem;
-      bottom: 1rem;
-      z-index: 1000;
-      width: 44px;
-      height: 44px;
-      border: 1px solid #7f939e;
-      border-radius: 50%;
-      background: var(--navy);
-      color: white;
-      cursor: pointer;
-      visibility: hidden;
-    }
+    #portfolio-scroll-top { position: fixed; right: 1rem; bottom: 1rem; z-index: 1000; width: 44px; height: 44px; border: 1px solid #7f939e; border-radius: 50%; background: var(--navy); color: white; cursor: pointer; visibility: hidden; }
     #portfolio-scroll-top.is-visible { visibility: visible; }
     #ftco-loader .path { stroke: var(--teal); }
 
@@ -336,11 +152,7 @@
     }
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-      }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
     }
   </style>
 </head>
@@ -366,21 +178,69 @@
     </div>
   </nav>
 
-<section class="hero" id="home-section">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">Hi!</p>
-      <h1><em>I'm</em> Md. Siam Waliur Rahman</h1>
-      <p class="role" id="role">Statistician</p>
-      <h2>Data Analytics</h2>
-      <a class="button" href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer">My works (GitHub)</a>
-    </div>
-    <figure class="portrait">
-      <img src="images/bg_1.png" alt="Portfolio hero image" fetchpriority="high">
-    </figure>
-  </div>
-</section>
+  <section id="home-section" class="hero">
+    <div class="home-slider owl-carousel">
+      <div class="slider-item">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+            <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);" role="img" aria-label="Portfolio hero image">
+              <div class="overlay"></div>
+            </div>
 
+            <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
+              <div class="text">
+                <span class="subheading">Hi!</span>
+                <h1 class="mb-4 mt-3">I'm <span>Md. Siam Waliur Rahman</span></h1>
+                <!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data Analytics  ',
+						'Data Science   ',
+						'Statistics & Research  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Data Analytics</h2>
+                <p class="mt-4 mb-0">
+                  <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4">My works (GitHub)</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
     <div class="container">
@@ -479,125 +339,125 @@
         <div class="col-md-10 heading-section text-center ftco-animate">
           <h1 class="big big-2">Resume</h1>
           <h2 class="mb-4">Resume</h2>
-          <p>Data Analyst | Data Scientist | AI & Machine Learning Enthusiast<br>
+			<p>Data Analyst | Data Scientist | AI & Machine Learning Enthusiast<br>
           <p>Data-driven professional with a strong foundation in Statistics, Data Analytics, Data Science, and Artificial Intelligence. Proficient in Python, R, SQL, SPSS, Stata, Power BI, and Microsoft Excel, with expertise in statistical modeling, exploratory data analysis, predictive analytics, machine learning, data visualization, and business intelligence. Experienced in applying quantitative research methods, developing analytical solutions, building interactive dashboards, and extracting actionable insights from complex datasets. Passionate about leveraging data science, AI, and advanced analytical techniques to solve real-world problems, optimize decision-making, and drive innovation.</p>
         </div>
       </div>
+		
+<div class="row align-items-center mb-4 justify-content-center text-center">
+  <div class="col-md-12">
+    <h1 class="big-4 mb-0">Experience</h1>
+    <div class="underline mx-auto"></div>
+  </div>
+</div>
+      <div class="row">
+  <div class="col-md-12 mb-5">
+    <div class="resume-wrap ftco-animate">
+      <span class="date">2023–Present</span>
+      <h2>Business Intelligence &amp; Data Visualization Projects</h2>
+      <span class="position">Project-Based Experience</span>
 
+      <p class="mt-4">Hands-on experience developing dashboards, reports, and analytical solutions using business intelligence and data visualization tools.</p>
+
+      <ul>
+        <li>Created interactive dashboards using Excel, Power BI and Tableau to visualize business and research data.</li>
+        <li>Designed KPI monitoring systems and data storytelling reports to support data-driven decision making.</li>
+        <li>Developed data visualizations, charts, and performance reports for academic and independent projects.</li>
+        <li>Worked with Python, SQL, Excel, and spreadsheet-based analytics for data cleaning, transformation, and reporting.</li>
+        <li>Applied analytical techniques to business, public health, environmental, and social science datasets.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Research Experience -->
+<div class="row">
+  <div class="col-md-12 mb-5">
+    <div class="resume-wrap ftco-animate">
+      <span class="date">2023–2026</span>
+      <h2>Applied Statistical Analysis &amp; Research Projects</h2>
+      <span class="position">Academic &amp; Independent Research</span>
+
+      <p class="mt-4">
+        Conducted applied statistical research focusing on labour dynamics,
+        socioeconomic inequalities, and climate-related livelihood vulnerabilities.
+        Applied quantitative research methods and statistical techniques to generate
+        evidence-based findings.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Labour Dynamics in Bangladesh's Tea Production Sector:</strong>
+          Conducted a cross-sectional assessment of labour dynamics and
+          socioeconomic characteristics. (2023)
+        </li>
+
+        <li>
+          <strong>Educational Attainment and Gender-Based Income Gaps among
+          Bangladeshi Migrant Workers:</strong>
+          Applied spatiotemporal analysis to investigate educational disparities
+          and gender-based income inequalities. (2025)
+        </li>
+
+        <li>
+          <strong>Livelihood Vulnerabilities among Coastal Fishing Households:</strong>
+          Conducted a multidimensional vulnerability assessment addressing
+          climate-related challenges. (2026)
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Research Assistantship -->
+<div class="row">
+  <div class="col-md-12 mb-5">
+    <div class="resume-wrap ftco-animate">
+      <span class="date">2025–2026</span>
+      <h2>Research Assistant</h2>
+      <span class="position">Department of Agricultural &amp; Applied Statistics, Bangladesh Agricultural University</span>
+
+      <p class="mt-4">
+        Assisted in multiple academic research projects involving statistical
+        modelling, quantitative research methodologies, and data analysis.
+      </p>
+
+      <ul>
+        <li>Assisted in multiple research projects involving statistical modelling and quantitative data analysis.</li>
+        <li>Used STATA, R, and Python for statistical analysis and data processing.</li>
+        <li>Applied statistical techniques to analyse complex datasets and support evidence-based research outcomes.</li>
+        <li>Contributed to research activities, data interpretation, and analytical reporting.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Conference Presentation -->
+<div class="row">
+  <div class="col-md-12 mb-5">
+    <div class="resume-wrap ftco-animate">
+      <span class="date">2026</span>
+      <h2>Conference Presenter</h2>
+      <span class="position">Regional Statistical Conference 2026 | BAU &amp; BSA</span>
+
+      <p class="mt-4">
+        Presented a research paper titled
+        <strong>"Educational Attainment and Gender-Based Income Gaps among
+        Bangladeshi Migrant Labourers: A Spatiotemporal Analysis"</strong>
+        at the Regional Statistical Conference 2026, jointly organized by
+        the Department of Agricultural and Applied Statistics, Bangladesh
+        Agricultural University (BAU), and the Bangladesh Statistical
+        Association (BSA).
+      </p>
+    </div>
+  </div>
+</div>
       <div class="row align-items-center mb-4 justify-content-center text-center">
-        <div class="col-md-12">
-          <h1 class="big-4 mb-0">Experience</h1>
-          <div class="underline mx-auto"></div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-12 mb-5">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2023–Present</span>
-            <h2>Business Intelligence &amp; Data Visualization Projects</h2>
-            <span class="position">Project-Based Experience</span>
-
-            <p class="mt-4">Hands-on experience developing dashboards, reports, and analytical solutions using business intelligence and data visualization tools.</p>
-
-            <ul>
-              <li>Created interactive dashboards using Excel, Power BI and Tableau to visualize business and research data.</li>
-              <li>Designed KPI monitoring systems and data storytelling reports to support data-driven decision making.</li>
-              <li>Developed data visualizations, charts, and performance reports for academic and independent projects.</li>
-              <li>Worked with Python, SQL, Excel, and spreadsheet-based analytics for data cleaning, transformation, and reporting.</li>
-              <li>Applied analytical techniques to business, public health, environmental, and social science datasets.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Research Experience -->
-      <div class="row">
-        <div class="col-md-12 mb-5">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2023–2026</span>
-            <h2>Applied Statistical Analysis &amp; Research Projects</h2>
-            <span class="position">Academic &amp; Independent Research</span>
-
-            <p class="mt-4">
-              Conducted applied statistical research focusing on labour dynamics,
-              socioeconomic inequalities, and climate-related livelihood vulnerabilities.
-              Applied quantitative research methods and statistical techniques to generate
-              evidence-based findings.
-            </p>
-
-            <ul>
-              <li>
-                <strong>Labour Dynamics in Bangladesh's Tea Production Sector:</strong>
-                Conducted a cross-sectional assessment of labour dynamics and
-                socioeconomic characteristics. (2023)
-              </li>
-              <li>
-                <strong>Educational Attainment and Gender-Based Income Gaps among
-                Bangladeshi Migrant Workers:</strong>
-                Applied spatiotemporal analysis to investigate educational disparities
-                and gender-based income inequalities. (2025)
-              </li>
-              <li>
-                <strong>Livelihood Vulnerabilities among Coastal Fishing Households:</strong>
-                Conducted a multidimensional vulnerability assessment addressing
-                climate-related challenges. (2026)
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Research Assistantship -->
-      <div class="row">
-        <div class="col-md-12 mb-5">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2025–2026</span>
-            <h2>Research Assistant</h2>
-            <span class="position">Department of Agricultural &amp; Applied Statistics, Bangladesh Agricultural University</span>
-
-            <p class="mt-4">
-              Assisted in multiple academic research projects involving statistical
-              modelling, quantitative research methodologies, and data analysis.
-            </p>
-
-            <ul>
-              <li>Assisted in multiple research projects involving statistical modelling and quantitative data analysis.</li>
-              <li>Used STATA, R, and Python for statistical analysis and data processing.</li>
-              <li>Applied statistical techniques to analyse complex datasets and support evidence-based research outcomes.</li>
-              <li>Contributed to research activities, data interpretation, and analytical reporting.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Conference Presentation -->
-      <div class="row">
-        <div class="col-md-12 mb-5">
-          <div class="resume-wrap ftco-animate">
-            <span class="date">2026</span>
-            <h2>Conference Presenter</h2>
-            <span class="position">Regional Statistical Conference 2026 | BAU &amp; BSA</span>
-
-            <p class="mt-4">
-              Presented a research paper titled
-              <strong>"Educational Attainment and Gender-Based Income Gaps among
-              Bangladeshi Migrant Labourers: A Spatiotemporal Analysis"</strong>
-              at the Regional Statistical Conference 2026, jointly organized by
-              the Department of Agricultural and Applied Statistics, Bangladesh
-              Agricultural University (BAU), and the Bangladesh Statistical
-              Association (BSA).
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row align-items-center mb-4 justify-content-center text-center">
-        <div class="col-md-12">
-          <h1 class="big-4 mb-0">Education</h1>
-          <div class="underline mx-auto"></div>
-        </div>
-      </div>
+  <div class="col-md-12">
+    <h1 class="big-4 mb-0">Education</h1>
+    <div class="underline mx-auto"></div>
+  </div>
+</div>
 
       <div class="row education-grid">
         <div class="col-md-6 d-flex">
