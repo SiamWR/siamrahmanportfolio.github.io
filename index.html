@@ -50,20 +50,52 @@
 
     /* The portrait keeps its original background image and carousel position. */
     #home-section { color: white; background: radial-gradient(ellipse at 77% 62%, #354e60, transparent 55%), var(--navy); }
-    #home-section .slider-item { height: auto !important; min-height: 0; background: transparent; }
-    #home-section .slider-text { display: grid !important; grid-template-columns: 1.05fr 1fr; align-items: center !important; gap: 4%; height: auto !important; min-height: 0; padding-block: clamp(6.5rem, 10vw, 9rem) clamp(2.5rem, 5vw, 4rem); }
-    #home-section .one-third.img { grid-area: 1 / 2; position: relative; inset: auto; order: 0; width: 100%; height: auto !important; aspect-ratio: 1.08; align-self: end; background-size: contain; background-position: center bottom; background-repeat: no-repeat; border-bottom: 1px solid #8f9b9f; }
-    #home-section .one-forth { grid-area: 1 / 1; position: relative; inset: auto; width: 100%; min-width: 0; }
-    #home-section .one-forth .text { position: static; width: 100%; max-width: 35rem; padding: 0; text-align: left; }
-    #home-section .overlay { background: transparent; }
+    #home-section .home-slider, #home-section .slider-item {
+      height: auto !important;
+      min-height: 0;
+    }
+    #home-section .slider-item { margin: 0; background: transparent; }
+    #home-section .hero-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+      align-items: center;
+      gap: clamp(1.5rem, 5vw, 4rem);
+      padding-block: clamp(6.75rem, 9vw, 8rem) clamp(2.5rem, 5vw, 4rem);
+    }
+    #home-section .hero-copy { width: 100%; max-width: 35rem; min-width: 0; text-align: left; }
+    #home-section .hero-portrait {
+      position: relative;
+      justify-self: center;
+      width: min(100%, clamp(14rem, 28vw, 21rem));
+      aspect-ratio: 4 / 5;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    #home-section .overlay { background: transparent; pointer-events: none; }
     #home-section .subheading { color: var(--brass); font-size: .82rem; font-weight: 600; letter-spacing: .14em; }
     #home-section h1 { color: #fcfaf4; font: 400 clamp(2.65rem, 5vw, 4.3rem)/1.08 var(--serif); letter-spacing: -.045em; }
     #home-section h1 span { color: inherit; }
     #typing-animation { display: inline-block; min-height: 1.6em; color: var(--brass); font-size: clamp(1rem, 1.7vw, 1.25rem); font-weight: 600; }
     #home-section h2 { color: #e0e7eb; font: 400 1.1rem/1.5 Poppins, sans-serif; }
-    #home-section .btn, #about-section .btn { border-radius: .35rem; font-size: .85rem; font-weight: 600; letter-spacing: .015em; text-transform: none; }
-    #home-section .btn.btn-outline-white { background: var(--brass); border: 1px solid var(--brass) !important; color: var(--navy) !important; }
-    #home-section .btn:hover { background: #f0dcba; }
+    #about-section .btn { border-radius: .35rem; font-size: .85rem; font-weight: 600; letter-spacing: .015em; text-transform: none; }
+    #home-section .hero-work {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: .7rem 1.5rem;
+      border: 1px solid var(--brass);
+      border-radius: .35rem;
+      background: var(--brass);
+      color: var(--navy);
+      font: 600 .95rem/1.4 Poppins, system-ui, sans-serif;
+      text-decoration: none;
+    }
+    #home-section .hero-work:is(:hover, :focus-visible, :active) {
+      color: var(--navy);
+      background: #f0dcba;
+    }
     #about-section .btn.btn-primary { background: var(--teal); color: white !important; border-color: var(--teal) !important; }
 
     #about-section .img-about { width: 100%; align-self: start; }
@@ -141,9 +173,14 @@
       .about-img img { max-width: 9rem; margin-bottom: 1rem; }
     }
     @media (max-width: 767.98px) {
-      #home-section .slider-text { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; padding-block: 5rem 1.5rem; }
-      #home-section .one-forth { grid-area: 1 / 1; }
-      #home-section .one-third.img { grid-area: 2 / 1; max-width: 23rem; aspect-ratio: 1.4; justify-self: center; }
+      #home-section .hero-intro {
+        grid-template-columns: minmax(0, 1fr);
+        justify-items: center;
+        gap: 1.75rem;
+        padding-block: 6rem 2rem;
+      }
+      #home-section .hero-copy { text-align: center; }
+      #home-section .hero-portrait { width: min(62vw, 15rem); }
       #about-section .img-about { margin-bottom: 2rem; }
       .about-img img { max-width: 9rem; margin-bottom: 1rem; }
       #about-section .about-info li { grid-template-columns: 5.4rem minmax(0, 1fr); }
@@ -183,13 +220,8 @@
       <div class="slider-item">
         <div class="overlay"></div>
         <div class="container">
-          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-            <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);" role="img" aria-label="Portfolio hero image">
-              <div class="overlay"></div>
-            </div>
-
-            <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-              <div class="text">
+          <div class="hero-intro">
+            <div class="hero-copy">
                 <span class="subheading">Hi!</span>
                 <h1 class="mb-4 mt-3">I'm <span>Md. Siam Waliur Rahman</span></h1>
                 <!-- Element to contain animated typing -->
@@ -232,9 +264,11 @@
 						<br>
 			            <h2>Data Analytics</h2>
                 <p class="mt-4 mb-0">
-                  <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4">My works (GitHub)</a>
+                  <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" class="hero-work">My Work</a>
                 </p>
-              </div>
+            </div>
+            <div class="hero-portrait" style="background-image:url(images/bg_1.png);" role="img" aria-label="Portfolio hero image">
+              <div class="overlay"></div>
             </div>
           </div>
         </div>
