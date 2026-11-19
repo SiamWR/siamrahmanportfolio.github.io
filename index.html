@@ -1,1581 +1,591 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <title>Md. Siam Waliur Rahman Portfolio</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="css/animate.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/magnific-popup.css">
-  <link rel="stylesheet" href="css/aos.css">
-  <link rel="stylesheet" href="css/ionicons.min.css">
-  <link rel="stylesheet" href="css/flaticon.css">
-  <link rel="stylesheet" href="css/icomoon.css">
-  <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    :root {
-      --portfolio-bg: #050505;
-      --portfolio-surface: #101010;
-      --portfolio-surface-2: #161616;
-      --portfolio-border: rgba(255, 255, 255, 0.09);
-      --portfolio-text: #f5f5f5;
-      --portfolio-muted: #b3b3b3;
-      --portfolio-accent: #ffbd39;
-      --portfolio-accent-soft: rgba(255, 189, 57, 0.12);
-      --portfolio-radius: 18px;
-      --portfolio-shadow: 0 20px 55px rgba(0, 0, 0, 0.28);
-      --portfolio-transition: 220ms ease;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: var(--portfolio-bg);
-      color: var(--portfolio-text);
-      line-height: 1.75;
-      overflow-x: hidden;
-    }
-
-    a {
-      transition: color var(--portfolio-transition), opacity var(--portfolio-transition), transform var(--portfolio-transition);
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--portfolio-accent);
-      outline-offset: 4px;
-    }
-
-    .container {
-      position: relative;
-    }
-
-    /* Navigation */
-    #ftco-navbar {
-      padding-top: 16px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid transparent;
-      transition: background var(--portfolio-transition), border-color var(--portfolio-transition), box-shadow var(--portfolio-transition);
-    }
-
-    #ftco-navbar.scrolled,
-    #ftco-navbar.awake {
-      background: rgba(5, 5, 5, 0.94) !important;
-      border-bottom-color: var(--portfolio-border);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    .navbar-brand {
-      font-weight: 700 !important;
-      letter-spacing: -0.3px;
-      white-space: normal;
-    }
-
-    .navbar-nav .nav-link {
-      font-weight: 500;
-      letter-spacing: 0.1px;
-    }
-
-    .navbar-nav .nav-link span {
-      position: relative;
-    }
-
-    .navbar-nav .nav-link span::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -8px;
-      width: 0;
-      height: 2px;
-      background: var(--portfolio-accent);
-      transition: width var(--portfolio-transition);
-    }
-
-    .navbar-nav .nav-link:hover span::after,
-    .navbar-nav .nav-item.active .nav-link span::after {
-      width: 100%;
-    }
-
-    /* Hero */
-    #home-section {
-      position: relative;
-      background:
-        radial-gradient(circle at 18% 25%, rgba(255, 189, 57, 0.10), transparent 28%),
-        linear-gradient(180deg, #050505 0%, #080808 100%);
-    }
-
-    #home-section .slider-item,
-    #home-section .slider-text {
-      min-height: 100vh;
-    }
-
-    #home-section .slider-item .overlay {
-      background: linear-gradient(90deg, rgba(5, 5, 5, 0.28), rgba(5, 5, 5, 0.05));
-    }
-
-    #home-section .one-third.img {
-      background-size: contain;
-      background-position: center bottom;
-      background-repeat: no-repeat;
-      filter: saturate(0.96) contrast(1.02);
-    }
-
-    #home-section .one-forth .text {
-      max-width: 680px;
-      padding: 28px 0 56px;
-    }
-
-    #home-section .subheading {
-      display: inline-flex;
-      align-items: center;
-      min-height: 34px;
-      padding: 5px 14px;
-      margin-bottom: 14px;
-      border: 1px solid rgba(255, 189, 57, 0.28);
-      border-radius: 999px;
-      background: var(--portfolio-accent-soft);
-      color: var(--portfolio-accent) !important;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-    }
-
-    #home-section h1 {
-      line-height: 1.08;
-      letter-spacing: -1.6px;
-    }
-
-    #home-section h1 span {
-      color: var(--portfolio-accent);
-    }
-
-    #typing-animation {
-      display: inline-flex;
-      align-items: center;
-      min-height: 48px;
-      margin: 2px 0 6px;
-      color: #ffffff;
-      font-size: clamp(1.35rem, 2.3vw, 1.9rem);
-      font-weight: 700;
-      letter-spacing: -0.3px;
-    }
-
-    #typing-animation::after {
-      content: "";
-      width: 2px;
-      height: 1.15em;
-      margin-left: 7px;
-      background: var(--portfolio-accent);
-      animation: portfolio-caret 0.8s steps(1) infinite;
-    }
-
-    @keyframes portfolio-caret {
-      50% { opacity: 0; }
-    }
-
-    #home-section h2 {
-      margin-top: 4px;
-      color: #d9d9d9;
-      font-size: 1.2rem;
-      font-weight: 500;
-    }
-
-    .portfolio-primary-btn,
-    .btn.btn-primary,
-    .btn.btn-white.btn-outline-white {
-      border-radius: 999px !important;
-      font-weight: 600;
-      letter-spacing: 0.2px;
-      transition: transform var(--portfolio-transition), box-shadow var(--portfolio-transition), background var(--portfolio-transition);
-    }
-
-    .btn.btn-white.btn-outline-white:hover,
-    .btn.btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 30px rgba(255, 189, 57, 0.18);
-    }
-
-    /* Shared section styling */
-    .ftco-section {
-      padding-top: 6.5rem;
-      padding-bottom: 6.5rem;
-    }
-
-    .heading-section .big {
-      opacity: 0.045;
-      letter-spacing: -2px;
-    }
-
-    .heading-section h2,
-    .big-4 {
-      letter-spacing: -0.7px;
-    }
-
-    .heading-section > p {
-      max-width: 860px;
-      margin-left: auto;
-      margin-right: auto;
-      color: var(--portfolio-muted);
-    }
-
-    .underline {
-      height: 3px;
-      width: 74px;
-      margin-left: 18px;
-      border-radius: 999px;
-      background: var(--portfolio-accent);
-    }
-
-    /* About */
-    #about-section {
-      background: linear-gradient(180deg, #080808 0%, #050505 100%);
-    }
-
-    #about-section .img-about {
-      width: 100%;
-      min-height: 100%;
-    }
-
-    #about-section .img-about > .overlay {
-      width: 100%;
-      padding: 30px;
-      border: 1px solid var(--portfolio-border);
-      border-radius: var(--portfolio-radius);
-      background: linear-gradient(145deg, rgba(22, 22, 22, 0.98), rgba(12, 12, 12, 0.98));
-      box-shadow: var(--portfolio-shadow);
-    }
-
-    .about-img {
-      margin-bottom: 1.5rem;
-    }
-
-    .about-img img {
-      width: 100%;
-      max-width: 190px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      margin-left: 0 !important;
-      border: 2px solid rgba(255, 189, 57, 0.34);
-      border-radius: 18px !important;
-      box-shadow: 0 16px 42px rgba(0, 0, 0, 0.32);
-    }
-
-    .about-info p {
-      margin-bottom: 11px;
-      color: var(--portfolio-muted);
-    }
-
-    .about-info .title-s,
-    .skill-mf .title-s {
-      color: #ffffff;
-      font-weight: 600;
-    }
-
-    .skill-mf {
-      margin-top: 24px;
-      padding-top: 22px;
-      border-top: 1px solid var(--portfolio-border);
-    }
-
-    .skill-mf > span {
-      color: #e6e6e6;
-      font-size: 0.92rem;
-    }
-
-    .skill-mf .progress {
-      height: 7px;
-      margin: 8px 0 20px;
-      overflow: hidden;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    .skill-mf .progress .progress-bar {
-      height: 7px;
-      border-radius: 999px;
-      background: linear-gradient(90deg, #ffbd39, #ffd36f);
-      box-shadow: 0 0 14px rgba(255, 189, 57, 0.28);
-    }
-
-    #about-section .col-md-6.col-lg-7 {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    #about-section .heading-section > p {
-      margin-left: 0;
-      color: #cccccc;
-    }
-
-    #about-section .about-info.mt-4 {
-      display: grid;
-      gap: 4px;
-      margin-top: 28px !important;
-    }
-
-    #about-section .about-info.mt-4 li {
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    #about-section .about-info.mt-4 li > span:first-child {
-      flex: 0 0 118px;
-      color: #ffffff;
-      font-weight: 600;
-    }
-
-    #about-section .about-info.mt-4 li > span:last-child {
-      color: var(--portfolio-muted);
-    }
-
-    .counter-wrap .number {
-      color: var(--portfolio-accent) !important;
-      font-weight: 700;
-    }
-
-    /* Resume */
-    #resume-section {
-      background: #050505;
-    }
-
-    #resume-section .resume-wrap {
-      height: 100%;
-      padding: 32px;
-      border: 1px solid var(--portfolio-border);
-      border-radius: var(--portfolio-radius);
-      background: linear-gradient(145deg, rgba(20, 20, 20, 0.98), rgba(12, 12, 12, 0.98));
-      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
-      transition: transform var(--portfolio-transition), border-color var(--portfolio-transition), box-shadow var(--portfolio-transition);
-    }
-
-    #resume-section .resume-wrap:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 189, 57, 0.22);
-      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.28);
-    }
-
-    #resume-section .resume-wrap .date {
-      display: inline-flex;
-      padding: 4px 11px;
-      border-radius: 999px;
-      background: var(--portfolio-accent-soft);
-      color: var(--portfolio-accent);
-      font-size: 0.88rem;
-      font-weight: 600;
-    }
-
-    #resume-section .resume-wrap h2 {
-      margin-top: 16px;
-      line-height: 1.3;
-    }
-
-    #resume-section .resume-wrap .position {
-      color: #c9c9c9;
-    }
-
-    #resume-section .resume-wrap p,
-    #resume-section .resume-wrap li {
-      color: var(--portfolio-muted);
-    }
-
-    #resume-section .resume-wrap ul {
-      margin-bottom: 0;
-      padding-left: 20px;
-    }
-
-    #resume-section .resume-wrap li {
-      margin-bottom: 8px;
-    }
-
-    #resume-section .education-grid > [class*="col-"] {
-      margin-bottom: 30px;
-    }
-
-    /* Projects */
-    #project-section {
-      position: relative;
-      background: linear-gradient(180deg, #050505 0%, #090909 100%);
-    }
-
-    #project-section .project-grid > [class*="col-"] {
-      margin-bottom: 30px;
-    }
-
-    #project-section .blog-entry {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      flex-direction: column;
-      border: 1px solid var(--portfolio-border);
-      border-radius: var(--portfolio-radius);
-      background: var(--portfolio-surface);
-      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.20);
-      transition: transform var(--portfolio-transition), border-color var(--portfolio-transition), box-shadow var(--portfolio-transition);
-    }
-
-    #project-section .blog-entry:hover {
-      transform: translateY(-6px);
-      border-color: rgba(255, 189, 57, 0.24);
-      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.32);
-    }
-
-    #project-section .block-20 {
-      position: relative;
-      height: 290px;
-      margin: 0;
-      border-radius: 0;
-      background-position: center;
-      background-size: cover;
-      transition: transform 420ms ease, filter 420ms ease;
-    }
-
-    #project-section .blog-entry:hover .block-20 {
-      transform: scale(1.025);
-      filter: brightness(1.05);
-    }
-
-    .zoom-effect {
-      overflow: hidden;
-    }
-
-    .zoom-effect:hover {
-      transform: scale(1.025) !important;
-    }
-
-    #project-section .text {
-      display: flex !important;
-      flex: 1;
-      flex-direction: column;
-      margin-top: 0 !important;
-      padding: 26px 26px 28px;
-      float: none !important;
-    }
-
-    #project-section .heading {
-      margin-bottom: 14px;
-      line-height: 1.38;
-    }
-
-    #project-section .heading a {
-      color: #ffffff;
-      font-weight: 650;
-    }
-
-    #project-section .heading a:hover {
-      color: var(--portfolio-accent);
-    }
-
-    #project-section .text p {
-      margin-bottom: 0;
-      color: var(--portfolio-muted);
-      font-size: 0.96rem;
-      line-height: 1.75;
-    }
-
-
-    /* Technology filters: scoped to the existing Projects section. */
-    #project-section .project-filter-panel {
-      margin: -12px 0 32px;
-    }
-
-    #project-section .project-filter-panel[hidden],
-    #project-section .project-item[hidden] {
-      display: none !important; /* Overrides Bootstrap's d-flex utility. */
-    }
-
-    #project-section .project-filters {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    #project-section .project-filter {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      min-height: 46px;
-      max-width: 100%;
-      padding: 10px 18px;
-      border: 1px solid var(--portfolio-border);
-      border-radius: 999px;
-      background: var(--portfolio-surface);
-      color: var(--portfolio-text);
-      font: inherit;
-      font-size: 0.9rem;
-      font-weight: 600;
-      line-height: 1.4;
-      cursor: pointer;
-      transition: background var(--portfolio-transition),
-                  color var(--portfolio-transition),
-                  border-color var(--portfolio-transition),
-                  transform var(--portfolio-transition);
-    }
-
-    #project-section .project-filter:hover {
-      border-color: var(--portfolio-accent);
-      background: var(--portfolio-accent-soft);
-      transform: translateY(-2px);
-    }
-
-    #project-section .project-filter[aria-pressed="true"] {
-      border-color: var(--portfolio-accent);
-      background: var(--portfolio-accent);
-      color: var(--portfolio-bg);
-    }
-
-    #project-section .project-filter-count {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 24px;
-      height: 24px;
-      padding: 0 6px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.09);
-      font-size: 0.78rem;
-      font-variant-numeric: tabular-nums;
-    }
-
-    #project-section .project-filter[aria-pressed="true"] .project-filter-count {
-      background: rgba(5, 5, 5, 0.12);
-    }
-
-    #project-section .project-filter-status {
-      margin: 16px 0 0;
-      color: var(--portfolio-muted);
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
-    #project-section .project-item {
-      min-width: 0;
-    }
-
-    /* Keep revealed cards visible after filtering, independently of scroll animations. */
-    #project-section .project-grid.has-filtered .project-item {
-      opacity: 1;
-      visibility: visible;
-      animation: none;
-    }
-
-    #project-section .project-item .block-20 {
-      flex-shrink: 0;
-    }
-
-    #project-section .project-item .heading,
-    #project-section .project-item .text p {
-      overflow-wrap: anywhere;
-    }
-
-    @media (max-width: 575.98px) {
-      #project-section .project-filters {
-        gap: 8px;
-      }
-
-      #project-section .project-filter {
-        padding: 10px 13px;
-        font-size: 0.82rem;
-      }
-    }
-
-    /* Contact */
-    #contact-section {
-      padding-bottom: 4.5rem;
-      background: #050505;
-    }
-
-    #contact-section .contact-info > [class*="col-"] {
-      margin-bottom: 24px;
-    }
-
-    #contact-section .box {
-      width: 100%;
-      border: 1px solid var(--portfolio-border);
-      border-radius: var(--portfolio-radius);
-      background: var(--portfolio-surface);
-      box-shadow: 0 16px 38px rgba(0, 0, 0, 0.18);
-      transition: transform var(--portfolio-transition), border-color var(--portfolio-transition);
-    }
-
-    #contact-section .box:hover {
-      transform: translateY(-4px);
-      border-color: rgba(255, 189, 57, 0.24);
-    }
-
-    #contact-section .box .icon {
-      width: 74px;
-      height: 74px;
-      margin: 0 auto 18px;
-      border-radius: 50%;
-      background: var(--portfolio-accent-soft);
-    }
-
-    #contact-section .box .icon span {
-      color: var(--portfolio-accent);
-    }
-
-    #contact-section .box h3 {
-      color: #ffffff;
-      font-size: 1rem;
-    }
-
-    #contact-section .box p,
-    #contact-section .box a {
-      color: var(--portfolio-muted);
-      word-break: break-word;
-    }
-
-    #contact-section .box a:hover {
-      color: var(--portfolio-accent);
-    }
-
-    .ftco-footer-social li a {
-      display: inline-flex !important;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border: 1px solid var(--portfolio-border);
-      border-radius: 50%;
-      background: var(--portfolio-surface);
-      transition: transform var(--portfolio-transition), border-color var(--portfolio-transition), background var(--portfolio-transition);
-    }
-
-    .ftco-footer-social li a:hover {
-      transform: translateY(-3px);
-      border-color: rgba(255, 189, 57, 0.35);
-      background: var(--portfolio-accent-soft);
-    }
-
-    /* Scroll-to-top control */
-    #portfolio-scroll-top {
-      position: fixed;
-      right: 24px;
-      bottom: 24px;
-      z-index: 999;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 46px;
-      height: 46px;
-      padding: 0;
-      border: 1px solid rgba(255, 189, 57, 0.32);
-      border-radius: 50%;
-      background: rgba(16, 16, 16, 0.94);
-      color: var(--portfolio-accent);
-      opacity: 0;
-      pointer-events: none;
-      transform: translateY(10px);
-      transition: opacity var(--portfolio-transition), transform var(--portfolio-transition), background var(--portfolio-transition);
-      cursor: pointer;
-    }
-
-    #portfolio-scroll-top.is-visible {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translateY(0);
-    }
-
-    #portfolio-scroll-top:hover {
-      background: var(--portfolio-accent-soft);
-    }
-
-    /* Responsive refinements */
-    @media (max-width: 991.98px) {
-      #ftco-navbar {
-        background: rgba(5, 5, 5, 0.96) !important;
-      }
-
-      #home-section .slider-item,
-      #home-section .slider-text {
-        min-height: auto;
-      }
-
-      #home-section .slider-text {
-        padding-top: 118px;
-        padding-bottom: 72px;
-      }
-
-      #home-section .one-third.img {
-        min-height: 480px;
-        margin-top: 10px;
-      }
-
-      #home-section .one-forth .text {
-        padding-bottom: 20px;
-      }
-
-      #about-section .img-about > .overlay {
-        margin-bottom: 34px;
-      }
-    }
-
-    @media (max-width: 767.98px) {
-      .ftco-section {
-        padding-top: 4.75rem;
-        padding-bottom: 4.75rem;
-      }
-
-      #home-section .slider-text {
-        padding-top: 102px;
-        text-align: left;
-      }
-
-      #home-section h1 {
-        font-size: clamp(2.5rem, 11vw, 4rem);
-      }
-
-      #home-section .one-third.img {
-        min-height: 390px;
-      }
-
-      #about-section .img-about > .overlay,
-      #resume-section .resume-wrap,
-      #project-section .text {
-        padding: 24px;
-      }
-
-      #about-section .about-info.mt-4 li {
-        flex-direction: column;
-      }
-
-      #about-section .about-info.mt-4 li > span:first-child {
-        flex-basis: auto;
-        margin-bottom: 2px;
-      }
-
-      #project-section .block-20 {
-        height: 235px;
-      }
-
-      #portfolio-scroll-top {
-        right: 16px;
-        bottom: 16px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-      }
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Md. Siam Waliur Rahman Portfolio</title>
+<style>
+  :root {
+    --ink: #162f32;
+    --muted: #485e60;
+    --deep: #102f34;
+    --teal: #11675d;
+    --mint: #a9e2c8;
+    --paper: #faf9f5;
+    --line: #cbd6ce;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+  body { margin: 0; color: var(--ink); background: var(--paper); font: 1rem/1.65 system-ui, sans-serif; }
+  h1, h2, h3, h4, p, dl, dd, figure { margin: 0; }
+  h1, h2, h3, h4 { line-height: 1.12; text-wrap: balance; }
+  h1, h2 { font-family: var(--serif); font-weight: 400; }
+  h2 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -.045em; }
+  h3 { font-size: clamp(1.5rem, 3vw, 2.3rem); }
+  a { color: inherit; text-underline-offset: .23em; }
+  a:hover { text-decoration: underline; }
+  button { font: inherit; cursor: pointer; }
+  :focus-visible { outline: 3px solid #d68b20; outline-offset: 4px; }
+  [hidden] { display: none !important; }
+  .wrap { width: min(1140px, 90%); margin-inline: auto; }
+  .section { padding: clamp(3.75rem, 7vw, 6.5rem) 0; }
+  .eyebrow, .date { display: block; color: var(--teal); font: 700 .77rem/1.5 ui-monospace, monospace; letter-spacing: .13em; text-transform: uppercase; }
+  .eyebrow { margin-bottom: .8rem; }
+  .intro { margin-top: 1.2rem; max-width: 74ch; color: var(--muted); }
+
+  .site-nav { position: sticky; top: 0; z-index: 5; background: var(--deep); color: white; border-bottom: 1px solid #365256; }
+  .nav-inner, .links, .filters, .social { display: flex; align-items: center; gap: 1.3rem; }
+  .nav-inner { min-height: 4.5rem; justify-content: space-between; }
+  .brand { font: 600 1.16rem var(--serif); }
+  .site-nav a { text-decoration: none; }
+  .links a { padding: .45rem 0; border-bottom: 2px solid transparent; font-size: .91rem; }
+  .links a:hover, .links a[aria-current] { border-color: var(--mint); color: var(--mint); }
+  #menu { display: none; color: white; background: transparent; border: 1px solid #789391; border-radius: .35rem; padding: .4rem .8rem; }
+
+  .hero { overflow: hidden; background: radial-gradient(ellipse at 78% 64%, #245752, transparent 55%), var(--deep); color: #fffdf4; }
+  .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 5%; align-items: center; padding-block: clamp(3.3rem, 6vw, 6rem); }
+  .hero .eyebrow, .contact .eyebrow { color: var(--mint); }
+  .hero h1 { max-width: 13ch; font-size: clamp(3.5rem, 6.3vw, 6.1rem); line-height: .99; letter-spacing: -.055em; }
+  .hero h1 em { font-weight: 400; color: var(--mint); }
+  .role { min-height: 1.65em; margin: 1.6rem 0 .3rem; color: var(--mint); font: 600 1.03rem/1.65 ui-monospace, monospace; }
+  .hero h2 { font: 400 1.18rem/1.5 system-ui, sans-serif; letter-spacing: 0; }
+  .button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; margin-top: 1.6rem; padding: .65rem 1.25rem; border-radius: .35rem; background: var(--teal); color: white; font-weight: 650; text-decoration: none; }
+  .hero .button { background: var(--mint); color: var(--deep); }
+  .portrait {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    aspect-ratio: 1.1;
+    border: 1px solid #638b81;
+    border-radius: 48% 48% .4rem .4rem;
+    background-color: #2e5853;
+    background-image: linear-gradient(#ffffff0b 1px, transparent 1px),
+                      linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+  .portrait::before { content: ""; position: absolute; z-index: -1; inset: 9% 9% -30%; border: 1px solid #89b6a780; border-radius: 50%; background: radial-gradient(ellipse at top, #568476, transparent 74%); }
+  .portrait img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+
+  .about-grid { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.2fr); align-items: start; gap: clamp(2rem, 6vw, 5rem); }
+  .profile { padding: clamp(1.4rem, 3vw, 2.2rem); background: #edf2ec; border: 1px solid var(--line); border-radius: .65rem; }
+  .avatar { width: 7rem; height: 7rem; object-fit: contain; display: block; margin-bottom: 1.1rem; }
+  .facts > div { display: grid; grid-template-columns: 6rem 1fr; gap: .65rem; padding: .62rem 0; border-bottom: 1px solid var(--line); }
+  dt { font-weight: 650; }
+  dd { color: var(--muted); }
+  .profile .facts > div { grid-template-columns: 5.6rem 1fr; }
+  .profile h3 { margin: 1.7rem 0 .8rem; font-size: 1.2rem; }
+  .skill { display: flex; justify-content: space-between; gap: 1rem; font-size: .9rem; }
+  progress { display: block; appearance: none; width: 100%; height: .38rem; border: 0; border-radius: 1rem; overflow: hidden; background: #d3dfd6; margin: .4rem 0 1rem; color: var(--teal); }
+  progress::-webkit-progress-bar { background: #d3dfd6; }
+  progress::-webkit-progress-value { background: var(--teal); }
+  progress::-moz-progress-bar { background: var(--teal); }
+  .bio .facts, .total { margin-top: 1.5rem; }
+  .total strong { font: 400 2.4rem var(--serif); color: var(--teal); vertical-align: middle; }
+
+  .resume { background: white; border-block: 1px solid var(--line); }
+  .subtitle { margin-top: 1.2rem; color: var(--teal); font-weight: 650; }
+  .subhead { margin: 3rem 0 1.4rem; font: 400 2rem var(--serif); }
+  .entry { display: grid; grid-template-columns: minmax(8rem, .35fr) 1.65fr; gap: 2rem; padding: 1.8rem 0; border-top: 1px solid var(--line); }
+  .entry h4, .degree h4, .project h3 { font: 600 1.25rem/1.35 system-ui, sans-serif; letter-spacing: -.025em; }
+  .position { display: block; margin: .35rem 0 1rem; font-weight: 600; color: var(--teal); }
+  .entry p, .entry li, .degree p, .project p { color: var(--muted); }
+  .entry ul { padding-left: 1.2rem; margin-bottom: 0; }
+  .entry li + li { margin-top: .4rem; }
+  .degrees, .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; }
+  .degree { border-top: 2px solid var(--teal); background: #f2f5ef; padding: 1.5rem; }
+  .degree h4 { margin-top: .65rem; }
+
+  .filters { flex-wrap: wrap; gap: .5rem; margin: 2rem 0 .6rem; }
+  .filters button { padding: .52rem .85rem; min-height: 44px; border-radius: 2rem; border: 1px solid var(--line); background: white; color: var(--ink); font-weight: 600; font-size: .88rem; }
+  .filters button:hover { border-color: var(--teal); }
+  .filters button[aria-pressed="true"] { background: var(--deep); color: white; border-color: var(--deep); }
+  .filters small { font-variant-numeric: tabular-nums; margin-left: .45rem; }
+  #status { font-size: .88rem; color: var(--muted); }
+  .projects { margin-top: 1.5rem; }
+  .project { position: relative; background: white; border: 1px solid var(--line); border-radius: .65rem; transition: box-shadow .2s, border-color .2s; }
+  .project:hover, .project:focus-within { border-color: #799b90; box-shadow: 0 8px 24px #16342e12; }
+  .project img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; background: #e7ede9; border-radius: .6rem .6rem 0 0; border-bottom: 1px solid var(--line); }
+  .project div { padding: clamp(1.2rem, 2.4vw, 1.8rem); }
+  .project a { text-decoration: none; }
+  .project a:hover { text-decoration: underline; }
+  .project a::after { content: ""; position: absolute; inset: 0; }
+  .project p { margin-top: .75rem; }
+
+  .contact { background: var(--deep); color: white; }
+  .contact .intro, .contact dd { color: #d6e4df; }
+  .reach { display: grid; grid-template-columns: .85fr 1fr 1.4fr; gap: 1.5rem; margin: 2.3rem 0; }
+  .reach > div { border-top: 1px solid #59747a; padding-top: 1rem; }
+  .reach dt { color: var(--mint); margin-bottom: .4rem; }
+  .reach a { overflow-wrap: anywhere; }
+  .social { flex-wrap: wrap; }
+  .social h3 { font: 600 1rem system-ui, sans-serif; }
+  #top { position: fixed; z-index: 4; right: 1rem; bottom: 1rem; width: 44px; height: 44px; border: 1px solid #74968d; border-radius: 50%; background: var(--deep); color: white; font-size: 1.3rem; }
+
+  @media (max-width: 760px) {
+    .hero-grid, .about-grid, .entry, .degrees, .projects, .reach { grid-template-columns: 1fr; }
+    .hero-grid { gap: 2rem; }
+    .portrait { width: min(100%, 25rem); justify-self: center; }
+    .entry { gap: .5rem; }
+    .nav-inner { flex-wrap: wrap; gap: 0; padding: .7rem 0; min-height: 3.8rem; }
+    .links { width: 100%; gap: .85rem; flex-wrap: wrap; }
+    .js #menu { display: block; }
+    .js .links { display: none; }
+    .js .links.open { display: grid; gap: .1rem; padding-top: .65rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .project { transition: none; }
+  }
+</style>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body>
+<nav class="site-nav" aria-label="Primary navigation">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html">Md. Siam Waliur Rahman</a>
+    <button id="menu" type="button" aria-controls="links" aria-expanded="false">Menu</button>
+    <div class="links" id="links">
+      <a href="#home-section">Home</a>
+      <a href="#about-section">About</a>
+      <a href="#resume-section">Resume</a>
+      <a href="#project-section">Projects</a>
+      <a href="#contact-section">Contact</a>
+    </div>
+  </div>
+</nav>
 
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar" aria-label="Primary navigation">
-    <div class="container">
-      <a class="navbar-brand" href="index.html">Md. Siam Waliur Rahman</a>
-      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="oi oi-menu"></span> Menu
-      </button>
+<main>
+<section class="hero" id="home-section">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Hi!</p>
+      <h1><em>I'm</em> Md. Siam Waliur Rahman</h1>
+      <p class="role" id="role">Statistician</p>
+      <h2>Data Analytics</h2>
+      <a class="button" href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer">My works (GitHub)</a>
+    </div>
+    <figure class="portrait">
+      <img src="images/bg_1.png" alt="Portfolio hero image" fetchpriority="high">
+    </figure>
+  </div>
+</section>
 
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav nav ml-auto">
-          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+<section class="section" id="about-section">
+  <div class="wrap about-grid">
+    <aside class="profile">
+      <img class="avatar" src="images/about-me.png" alt="Md Siam Waliur Rahman">
+      <dl class="facts">
+        <div><dt>Name:</dt><dd>Md Siam Waliur Rahman</dd></div>
+        <div><dt>Role:</dt><dd>Data Analytics | Data Science</dd></div>
+        <div><dt>Experience:</dt><dd>Experience in Data Analytics, Data Science &amp; Research</dd></div>
+        <div><dt>Address:</dt><dd>Dhaka, Bangladesh</dd></div>
+      </dl>
+
+      <h3>Skills</h3>
+      <div class="skill"><label for="skill-0">PYTHON, R &amp; STATA</label><span>90%</span></div>
+      <progress id="skill-0" max="100" value="90">90%</progress>
+
+      <div class="skill"><label for="skill-1">Excel &amp; Power BI</label><span>90%</span></div>
+      <progress id="skill-1" max="100" value="90">90%</progress>
+
+      <div class="skill"><label for="skill-2">SQL</label><span>80%</span></div>
+      <progress id="skill-2" max="100" value="80">80%</progress>
+
+      <div class="skill"><label for="skill-3">Statistical Analysis</label><span>95%</span></div>
+      <progress id="skill-3" max="100" value="95">95%</progress>
+
+      <div class="skill"><label for="skill-4">Machine Learning &amp; AI</label><span>90%</span></div>
+      <progress id="skill-4" max="100" value="90">90%</progress>
+    </aside>
+
+    <div class="bio">
+      <p class="eyebrow">About</p>
+      <h2>About Me</h2>
+      <p class="intro">I am a Data Analyst and Researcher with experience in statistical data analysis, data visualization, and quantitative research. Through academic and independent projects, I have worked extensively with R, SPSS, Stata, Python, Excel, Power BI, and SQL to analyze complex datasets and generate actionable insights.</p>
+
+      <dl class="facts">
+        <div><dt>Profile:</dt><dd>Data Analytics &amp; Data Science</dd></div>
+        <div><dt>Domain:</dt><dd>Statistics, Business Intelligence &amp; Data Science</dd></div>
+        <div><dt>Education:</dt><dd>MS in Agricultural Statistics (BAU) | B.Sc. in Statistics (MBSTU)</dd></div>
+        <div><dt>Language:</dt><dd>English, Bangla</dd></div>
+        <div><dt>BI Tools:</dt><dd>Microsoft Power BI, Excel &amp; Tableau</dd></div>
+        <div><dt>Skills:</dt><dd>Python, SQL, Machine Learning, Automation, AI, R, Stata, SPSS, &amp; Data Visualization</dd></div>
+        <div><dt>Interest:</dt><dd>Traveling, Photography, Drawing, Teaching, Singing</dd></div>
+      </dl>
+
+      <p class="total"><strong>14 +</strong> Projects completed</p>
+      <a class="button" href="http://www.linkedin.com/in/mdsiamwaliur" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<section class="section resume" id="resume-section">
+  <div class="wrap">
+    <p class="eyebrow">Resume</p>
+    <h2>Resume</h2>
+    <p class="subtitle">Data Analyst | Data Scientist | AI &amp; Machine Learning Enthusiast</p>
+    <p class="intro">Data-driven professional with a strong foundation in Statistics, Data Analytics, Data Science, and Artificial Intelligence. Proficient in Python, R, SQL, SPSS, Stata, Power BI, and Microsoft Excel, with expertise in statistical modeling, exploratory data analysis, predictive analytics, machine learning, data visualization, and business intelligence. Experienced in applying quantitative research methods, developing analytical solutions, building interactive dashboards, and extracting actionable insights from complex datasets. Passionate about leveraging data science, AI, and advanced analytical techniques to solve real-world problems, optimize decision-making, and drive innovation.</p>
+
+    <h3 class="subhead">Experience</h3>
+
+    <article class="entry">
+      <span class="date">2023–Present</span>
+      <div>
+        <h4>Business Intelligence &amp; Data Visualization Projects</h4>
+        <span class="position">Project-Based Experience</span>
+        <p>Hands-on experience developing dashboards, reports, and analytical solutions using business intelligence and data visualization tools.</p>
+        <ul>
+          <li>Created interactive dashboards using Excel, Power BI and Tableau to visualize business and research data.</li>
+          <li>Designed KPI monitoring systems and data storytelling reports to support data-driven decision making.</li>
+          <li>Developed data visualizations, charts, and performance reports for academic and independent projects.</li>
+          <li>Worked with Python, SQL, Excel, and spreadsheet-based analytics for data cleaning, transformation, and reporting.</li>
+          <li>Applied analytical techniques to business, public health, environmental, and social science datasets.</li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </article>
 
-  <section id="home-section" class="hero">
-    <div class="home-slider owl-carousel">
-      <div class="slider-item">
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-            <div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);" role="img" aria-label="Portfolio hero image">
-              <div class="overlay"></div>
-            </div>
-
-            <div class="one-forth d-flex align-items-center ftco-animate" data-scrollax="properties: { translateY: '70%' }">
-              <div class="text">
-                <span class="subheading">Hi!</span>
-                <h1 class="mb-4 mt-3">I'm <span>Md. Siam Waliur Rahman</span></h1>
-                <!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Data Analytics  ',
-						'Data Science   ',
-						'Statistics & Research  ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>Data Analytics</h2>
-                <p class="mt-4 mb-0">
-                  <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" class="btn btn-white btn-outline-white py-3 px-4">My works (GitHub)</a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    <div class="container">
-      <div class="row d-flex align-items-stretch">
-        <div class="col-md-6 col-lg-5 d-flex">
-          <div class="img-about img d-flex align-items-stretch">
-            <div class="overlay">
-              <div class="row align-items-center">
-                <div class="col-sm-6 col-md-5">
-                  <div class="about-img">
-                    <img src="images/about-me.png" class="img-fluid b-shadow-a" alt="Md Siam Waliur Rahman">
-                  </div>
-                </div>
-
-                <div class="col-sm-6 col-md-7">
-                  <div class="about-info">
-                    <p><span class="title-s">Name: </span> <span>Md Siam Waliur Rahman</span></p>
-                    <p><span class="title-s">Role: </span> <span>Data Analytics | Data Science</span></p>
-                    <p><span class="title-s">Experience: </span> <span> Experience in Data Analytics, Data Science &amp; Research</span></p>
-                    <p><span class="title-s">Address: </span> <span>Dhaka, Bangladesh</span></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="skill-mf">
-                <p class="title-s">Skills</p>
-
-                <span>PYTHON, R &amp; STATA</span> <span class="pull-right">90%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-
-                <span>Excel &amp; Power BI</span> <span class="pull-right">90%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-
-                <span>SQL</span> <span class="pull-right">80%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-
-                <span>Statistical Analysis</span> <span class="pull-right">95%</span>
-                <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-
-                <span>Machine Learning & AI</span> <span class="pull-right">90%</span>
-                <div class="progress mb-0">
-                  <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-          <div class="row justify-content-start pb-3">
-            <div class="col-md-12 heading-section ftco-animate">
-              <h1 class="big">About</h1>
-              <h2 class="mb-4">About Me</h2>
-
-              <p>I am a Data Analyst and Researcher with experience in statistical data analysis, data visualization, and quantitative research. Through academic and independent projects, I have worked extensively with R, SPSS, Stata, Python, Excel, Power BI, and SQL to analyze complex datasets and generate actionable insights.</p>
-
-              <ul class="about-info mt-4 px-md-0 px-2">
-                <li class="d-flex"><span>Profile:</span> <span>Data Analytics &amp; Data Science</span></li>
-                <li class="d-flex"><span>Domain:</span> <span>Statistics, Business Intelligence &amp; Data Science</span></li>
-                <li class="d-flex"><span>Education:</span> <span>MS in Agricultural Statistics (BAU) | B.Sc. in Statistics (MBSTU)</span></li>
-                <li class="d-flex"><span>Language:</span> <span>English, Bangla</span></li>
-                <li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Excel &amp; Tableau</span></li>
-                <li class="d-flex"><span>Skills:</span> <span>Python, SQL, Machine Learning, Automation, AI, R, Stata, SPSS, &amp; Data Visualization</span></li>
-                <li class="d-flex"><span>Interest:</span> <span>Traveling, Photography, Drawing, Teaching, Singing</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="counter-wrap ftco-animate d-flex mt-md-3">
-            <div class="text">
-              <p class="mb-4">
-                <span class="number" data-number="14">0</span> <span>+</span>
-                <span>&nbsp; Projects completed</span>
-              </p>
-              <p class="mb-0">
-                <a href="http://www.linkedin.com/in/mdsiamwaliur" target="_blank" rel="noopener noreferrer" class="btn btn-primary py-3 px-3">LinkedIn</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ftco-section ftco-no-pb" id="resume-section">
-    <div class="container">
-      <div class="row justify-content-center pb-5">
-        <div class="col-md-10 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Resume</h1>
-          <h2 class="mb-4">Resume</h2>
-			<p>Data Analyst | Data Scientist | AI & Machine Learning Enthusiast<br>
-          <p>Data-driven professional with a strong foundation in Statistics, Data Analytics, Data Science, and Artificial Intelligence. Proficient in Python, R, SQL, SPSS, Stata, Power BI, and Microsoft Excel, with expertise in statistical modeling, exploratory data analysis, predictive analytics, machine learning, data visualization, and business intelligence. Experienced in applying quantitative research methods, developing analytical solutions, building interactive dashboards, and extracting actionable insights from complex datasets. Passionate about leveraging data science, AI, and advanced analytical techniques to solve real-world problems, optimize decision-making, and drive innovation.</p>
-        </div>
-      </div>
-		
-<div class="row align-items-center mb-4 justify-content-center text-center">
-  <div class="col-md-12">
-    <h1 class="big-4 mb-0">Experience</h1>
-    <div class="underline mx-auto"></div>
-  </div>
-</div>
-      <div class="row">
-  <div class="col-md-12 mb-5">
-    <div class="resume-wrap ftco-animate">
-      <span class="date">2023–Present</span>
-      <h2>Business Intelligence &amp; Data Visualization Projects</h2>
-      <span class="position">Project-Based Experience</span>
-
-      <p class="mt-4">Hands-on experience developing dashboards, reports, and analytical solutions using business intelligence and data visualization tools.</p>
-
-      <ul>
-        <li>Created interactive dashboards using Excel, Power BI and Tableau to visualize business and research data.</li>
-        <li>Designed KPI monitoring systems and data storytelling reports to support data-driven decision making.</li>
-        <li>Developed data visualizations, charts, and performance reports for academic and independent projects.</li>
-        <li>Worked with Python, SQL, Excel, and spreadsheet-based analytics for data cleaning, transformation, and reporting.</li>
-        <li>Applied analytical techniques to business, public health, environmental, and social science datasets.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Research Experience -->
-<div class="row">
-  <div class="col-md-12 mb-5">
-    <div class="resume-wrap ftco-animate">
+    <article class="entry">
       <span class="date">2023–2026</span>
-      <h2>Applied Statistical Analysis &amp; Research Projects</h2>
-      <span class="position">Academic &amp; Independent Research</span>
+      <div>
+        <h4>Applied Statistical Analysis &amp; Research Projects</h4>
+        <span class="position">Academic &amp; Independent Research</span>
+        <p>Conducted applied statistical research focusing on labour dynamics, socioeconomic inequalities, and climate-related livelihood vulnerabilities. Applied quantitative research methods and statistical techniques to generate evidence-based findings.</p>
+        <ul>
+          <li><strong>Labour Dynamics in Bangladesh's Tea Production Sector:</strong> Conducted a cross-sectional assessment of labour dynamics and socioeconomic characteristics. (2023)</li>
+          <li><strong>Educational Attainment and Gender-Based Income Gaps among Bangladeshi Migrant Workers:</strong> Applied spatiotemporal analysis to investigate educational disparities and gender-based income inequalities. (2025)</li>
+          <li><strong>Livelihood Vulnerabilities among Coastal Fishing Households:</strong> Conducted a multidimensional vulnerability assessment addressing climate-related challenges. (2026)</li>
+        </ul>
+      </div>
+    </article>
 
-      <p class="mt-4">
-        Conducted applied statistical research focusing on labour dynamics,
-        socioeconomic inequalities, and climate-related livelihood vulnerabilities.
-        Applied quantitative research methods and statistical techniques to generate
-        evidence-based findings.
-      </p>
-
-      <ul>
-        <li>
-          <strong>Labour Dynamics in Bangladesh's Tea Production Sector:</strong>
-          Conducted a cross-sectional assessment of labour dynamics and
-          socioeconomic characteristics. (2023)
-        </li>
-
-        <li>
-          <strong>Educational Attainment and Gender-Based Income Gaps among
-          Bangladeshi Migrant Workers:</strong>
-          Applied spatiotemporal analysis to investigate educational disparities
-          and gender-based income inequalities. (2025)
-        </li>
-
-        <li>
-          <strong>Livelihood Vulnerabilities among Coastal Fishing Households:</strong>
-          Conducted a multidimensional vulnerability assessment addressing
-          climate-related challenges. (2026)
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Research Assistantship -->
-<div class="row">
-  <div class="col-md-12 mb-5">
-    <div class="resume-wrap ftco-animate">
+    <article class="entry">
       <span class="date">2025–2026</span>
-      <h2>Research Assistant</h2>
-      <span class="position">Department of Agricultural &amp; Applied Statistics, Bangladesh Agricultural University</span>
+      <div>
+        <h4>Research Assistant</h4>
+        <span class="position">Department of Agricultural &amp; Applied Statistics, Bangladesh Agricultural University</span>
+        <p>Assisted in multiple academic research projects involving statistical modelling, quantitative research methodologies, and data analysis.</p>
+        <ul>
+          <li>Assisted in multiple research projects involving statistical modelling and quantitative data analysis.</li>
+          <li>Used STATA, R, and Python for statistical analysis and data processing.</li>
+          <li>Applied statistical techniques to analyse complex datasets and support evidence-based research outcomes.</li>
+          <li>Contributed to research activities, data interpretation, and analytical reporting.</li>
+        </ul>
+      </div>
+    </article>
 
-      <p class="mt-4">
-        Assisted in multiple academic research projects involving statistical
-        modelling, quantitative research methodologies, and data analysis.
-      </p>
-
-      <ul>
-        <li>Assisted in multiple research projects involving statistical modelling and quantitative data analysis.</li>
-        <li>Used STATA, R, and Python for statistical analysis and data processing.</li>
-        <li>Applied statistical techniques to analyse complex datasets and support evidence-based research outcomes.</li>
-        <li>Contributed to research activities, data interpretation, and analytical reporting.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Conference Presentation -->
-<div class="row">
-  <div class="col-md-12 mb-5">
-    <div class="resume-wrap ftco-animate">
+    <article class="entry">
       <span class="date">2026</span>
-      <h2>Conference Presenter</h2>
-      <span class="position">Regional Statistical Conference 2026 | BAU &amp; BSA</span>
+      <div>
+        <h4>Conference Presenter</h4>
+        <span class="position">Regional Statistical Conference 2026 | BAU &amp; BSA</span>
+        <p>Presented a research paper titled <strong>"Educational Attainment and Gender-Based Income Gaps among Bangladeshi Migrant Labourers: A Spatiotemporal Analysis"</strong> at the Regional Statistical Conference 2026, jointly organized by the Department of Agricultural and Applied Statistics, Bangladesh Agricultural University (BAU), and the Bangladesh Statistical Association (BSA).</p>
+      </div>
+    </article>
 
-      <p class="mt-4">
-        Presented a research paper titled
-        <strong>"Educational Attainment and Gender-Based Income Gaps among
-        Bangladeshi Migrant Labourers: A Spatiotemporal Analysis"</strong>
-        at the Regional Statistical Conference 2026, jointly organized by
-        the Department of Agricultural and Applied Statistics, Bangladesh
-        Agricultural University (BAU), and the Bangladesh Statistical
-        Association (BSA).
-      </p>
+    <h3 class="subhead">Education</h3>
+    <div class="degrees">
+      <article class="degree">
+        <span class="date">2024–2026</span>
+        <h4>MS in Agricultural Statistics</h4>
+        <span class="position">Bangladesh Agricultural University (BAU), Mymensingh</span>
+        <p>Specialized in statistical modeling, research methodology, data analytics, survey analysis, advanced quantitative techniques, and applied statistics.</p>
+      </article>
+      <article class="degree">
+        <span class="date">2019–2023</span>
+        <h4>B.Sc. in Statistics</h4>
+        <span class="position">Mawlana Bhashani Science and Technology University (MBSTU), Tangail</span>
+        <p>Studied probability, statistical inference, regression analysis, experimental design, data visualization, and applied statistics.</p>
+      </article>
     </div>
   </div>
-</div>
-      <div class="row align-items-center mb-4 justify-content-center text-center">
-  <div class="col-md-12">
-    <h1 class="big-4 mb-0">Education</h1>
-    <div class="underline mx-auto"></div>
+</section>
+
+<section class="section" id="project-section">
+  <div class="wrap">
+    <p class="eyebrow">Projects</p>
+    <h2>Projects</h2>
+    <p class="intro">Explore projects in business intelligence, data analytics, machine learning, and automation using Python, SQL, Power BI, Microsoft Excel, and Stata.</p>
+
+    <div id="panel" hidden>
+      <div class="filters" role="group" aria-label="Filter projects by technology">
+        <button type="button" data-filter="all" aria-controls="portfolio-project-grid">All Projects</button>
+        <button type="button" data-filter="python" aria-controls="portfolio-project-grid">Python</button>
+        <button type="button" data-filter="sql" aria-controls="portfolio-project-grid">SQL</button>
+        <button type="button" data-filter="power-bi" aria-controls="portfolio-project-grid">Power BI</button>
+        <button type="button" data-filter="excel" aria-controls="portfolio-project-grid">Microsoft Excel</button>
+        <button type="button" data-filter="stata" aria-controls="portfolio-project-grid">Stata</button>
+        <button type="button" data-filter="machine-learning" aria-controls="portfolio-project-grid">Machine Learning</button>
+        <button type="button" data-filter="automation" aria-controls="portfolio-project-grid">Automation</button>
+      </div>
+      <p id="status" role="status"></p>
+    </div>
+
+    <div class="projects" id="portfolio-project-grid">
+      <article class="project" data-categories="power-bi">
+        <img src="images/ecommerce-dashboard.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Sales-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer">E-Commerce Sales Analytics Dashboard-Power BI</a></h3>
+          <p>End-to-end Power BI solution featuring RFM customer segmentation, forecasting, KPI tracking, drill-through analysis, and customer insights.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="power-bi">
+        <img src="images/hospital-dashboard.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Hospital-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer">Hospital Monitoring Dashboard-Power BI</a></h3>
+          <p>Interactive healthcare analytics dashboard for monitoring patient demographics, hospital performance, treatment costs, and operational KPIs.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="excel">
+        <img src="images/hotel-dashboard.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Excel-hotel-management-dashboard-project" target="_blank" rel="noopener noreferrer">Hotel Management Dashboard-Excel</a></h3>
+          <p>Excel-based dashboard analyzing hotel bookings, revenue, cancellations, ADR metrics, lead times, and business performance.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="excel">
+        <img src="images/dengue-dashboard.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Excel-dengue-analytics-dashboard-project" target="_blank" rel="noopener noreferrer">Dengue Report Analysis Dashboard-Excel</a></h3>
+          <p>Public health analytics dashboard for dengue surveillance, demographic analysis, diagnostic trends, and outbreak monitoring.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="sql">
+        <img src="images/sql-music-store-analysis.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Music_Store_Analysis-SQL" target="_blank" rel="noopener noreferrer">Music Store Database Analysis-SQL</a></h3>
+          <p>SQL-based business analysis project exploring customer behavior, sales performance, revenue trends, and music store insights using advanced SQL queries and relational database concepts.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="python">
+        <img src="images/Python.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Sales-Analysis-using-Python" target="_blank" rel="noopener noreferrer">Sales Analysis Using Python</a></h3>
+          <p>End-to-end retail sales analytics project utilizing Python, Pandas, NumPy, Matplotlib, and Seaborn to analyze customer demographics, purchasing behavior, product preferences, and regional sales performance through exploratory data analysis and data visualization.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="python machine-learning">
+        <img src="images/Customer_churn.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Customer-Churn-Analysis-Predictive-Modeling-using-Python" target="_blank" rel="noopener noreferrer">Customer Churn Analysis: Predictive Modeling using Python</a></h3>
+          <p>Developed machine learning model to predict customer churn through data cleaning, exploratory data analysis, and classification techniques.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="sql">
+        <img src="images/Customer_segmentation_sql.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Customer-segmentation-RFM-using-SQL" target="_blank" rel="noopener noreferrer">Sales and Customer Segmentation Analysis using SQL</a></h3>
+          <p>Analyzed sales data using SQL to generate business insights on customer segmentation, sales performance, and product trends.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="stata">
+        <img src="images/Household Survey Data Management.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/Household-survey-data-management-analysis-STATA" target="_blank" rel="noopener noreferrer">Household Survey Data Analysis: Data Management and Analysis using STATA</a></h3>
+          <p>Developed a reproducible Stata workflow for cleaning, validating, and analyzing 41,544 household records, including missing-data assessment, consistency checks, socioeconomic indicator construction, descriptive analysis, visualization, and robust OLS regression.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="automation">
+        <img src="images/RMG business intelligence automation pipeline.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/RMG-Business-Intelligence-Automation-Pipeline" target="_blank" rel="noopener noreferrer">RMG Business Intelligence Automation</a></h3>
+          <p>End-to-end business intelligence automation pipeline for Ready-Made Garment (RMG) production data, integrating Python ETL, data cleaning and validation, SQL Server, Power BI dashboards, PDF report export, Power Automate report distribution, and scheduled execution using Windows Task Scheduler.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="machine-learning">
+        <img src="images/Iris Flower Classification.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task1-IrisFlowerClassification" target="_blank" rel="noopener noreferrer">Iris Flower Classification</a></h3>
+          <p>Machine learning classification project predicting Iris Setosa, Iris Versicolor, and Iris Virginica from sepal and petal measurements. Includes exploratory data analysis, comparison of Logistic Regression and K-Nearest Neighbors, and model evaluation using accuracy, precision, recall, F1-score, and confusion matrices with Python and Scikit-learn.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="machine-learning">
+        <img src="images/Car price prediction with machine learning.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task3-CarPricePredictionwithMachineLearning" target="_blank" rel="noopener noreferrer">Car Price Prediction</a></h3>
+          <p>Machine learning regression project predicting used car selling prices from vehicle characteristics. Includes data cleaning, feature engineering, exploratory data analysis, and comparison of Linear Regression, Random Forest, and Gradient Boosting using MAE, RMSE, and R-squared, with Python and Scikit-learn.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="machine-learning">
+        <img src="images/Email Spam Detection with Linear SVM.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task4-EmailSpamDetection" target="_blank" rel="noopener noreferrer">Email Spam Detection</a></h3>
+          <p>NLP-based spam and ham message classification using the SMS Spam Collection Dataset. Includes text preprocessing, TF-IDF feature extraction, and comparison of Multinomial Naive Bayes, Logistic Regression, and Linear SVM, with Linear SVM selected for its F1-score.</p>
+        </div>
+      </article>
+
+      <article class="project" data-categories="machine-learning">
+        <img src="images/Sales prediction using Python.png" alt="" loading="lazy">
+        <div>
+          <h3><a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task5-SalesPrediction" target="_blank" rel="noopener noreferrer">Sales Prediction</a></h3>
+          <p>Machine learning regression project predicting sales from TV, radio, and newspaper advertising spending. Includes exploratory data analysis and a comparison of Linear Regression and Random Forest models using Python and Scikit-learn.</p>
+        </div>
+      </article>
+    </div>
   </div>
-</div>
+</section>
 
-      <div class="row education-grid">
-        <div class="col-md-6 d-flex">
-          <div class="resume-wrap ftco-animate w-100">
-            <span class="date">2024–2026</span>
-            <h2>MS in Agricultural Statistics</h2>
-            <span class="position">Bangladesh Agricultural University (BAU), Mymensingh</span>
-            <p class="mt-4">Specialized in statistical modeling, research methodology, data analytics, survey analysis, advanced quantitative techniques,  and applied statistics.</p>
-          </div>
-        </div>
+<section class="section contact" id="contact-section">
+  <div class="wrap">
+    <p class="eyebrow">Contact</p>
+    <h2>Contact Me</h2>
+    <p class="intro">Below are the details to reach out to me!</p>
 
-        <div class="col-md-6 d-flex">
-          <div class="resume-wrap ftco-animate w-100">
-            <span class="date">2019–2023</span>
-            <h2>B.Sc. in Statistics</h2>
-            <span class="position">Mawlana Bhashani Science and Technology University (MBSTU), Tangail</span>
-            <p class="mt-4">Studied probability, statistical inference, regression analysis, experimental design, data visualization, and applied statistics.</p>
-          </div>
-        </div>
+    <dl class="reach">
+      <div><dt>Address</dt><dd>Dhaka, Bangladesh</dd></div>
+      <div>
+        <dt>Contact Number</dt>
+        <dd><a href="tel:+8801761110721">+880 1761-110721</a></dd>
       </div>
-
-      <div class="row justify-content-center mt-4">
-        <div class="col-md-6 text-center ftco-animate"></div>
+      <div>
+        <dt>Email Address</dt>
+        <dd><a href="mailto:mdsiamwaliurrahman@gmail.com">mdsiamwaliurrahman@gmail.com</a></dd>
       </div>
+    </dl>
+
+    <div class="social">
+      <h3>Find Me On</h3>
+      <a href="https://www.linkedin.com/in/mdsiamwaliur/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer">GitHub</a>
     </div>
-  </section>
-
-  <section class="ftco-section" id="project-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5 pb-4">
-        <div class="col-md-8 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Projects</h1>
-          <h2 class="mb-4">Projects</h2>
-          <p>Explore projects in business intelligence, data analytics, machine learning, and automation using Python, SQL, Power BI, Microsoft Excel, and Stata.</p>
-        </div>
-      </div>
-
-      <!-- Native buttons support Tab, Enter and Space; all cards remain available without filtering. -->
-      <div class="project-filter-panel" id="project-filter-panel" hidden>
-        <div class="project-filters" role="group" aria-label="Filter projects by technology">
-          <button class="project-filter" type="button" data-filter="all" aria-pressed="true" aria-controls="portfolio-project-grid">
-            <span>All Projects</span><span class="project-filter-count" aria-hidden="true"></span>
-          </button>
-          <button class="project-filter" type="button" data-filter="python" aria-pressed="false" aria-controls="portfolio-project-grid">
-            <span>Python</span><span class="project-filter-count" aria-hidden="true"></span>
-          </button>
-          <button class="project-filter" type="button" data-filter="sql" aria-pressed="false" aria-controls="portfolio-project-grid">
-            <span>SQL</span><span class="project-filter-count" aria-hidden="true"></span>
-          </button>
-          <button class="project-filter" type="button" data-filter="power-bi" aria-pressed="false" aria-controls="portfolio-project-grid">
-            <span>Power BI</span><span class="project-filter-count" aria-hidden="true"></span>
-          </button>
-          <button class="project-filter" type="button" data-filter="excel" aria-pressed="false" aria-controls="portfolio-project-grid">
-            <span>Microsoft Excel</span><span class="project-filter-count" aria-hidden="true"></span>
-          </button>
-          <button class="project-filter" type="button" data-filter="stata" aria-pressed="false" aria-controls="portfolio-project-grid">
-            <span>Stata</span><span class="project-filter-count" aria-hidden="true"></span>
-          </button>
-          <button class="project-filter" type="button" data-filter="machine-learning" aria-pressed="false" aria-controls="portfolio-project-grid">
-            <span>Machine Learning</span><span class="project-filter-count" aria-hidden="true"></span>
-          </button>
-          <button class="project-filter" type="button" data-filter="automation" aria-pressed="false" aria-controls="portfolio-project-grid">
-            <span>Automation</span><span class="project-filter-count" aria-hidden="true"></span>
-          </button>
-        </div>
-        <p class="project-filter-status" id="project-filter-status" role="status" aria-live="polite" aria-atomic="true"></p>
-      </div>
-
-      <div class="row d-flex project-grid" id="portfolio-project-grid">
-        <!-- Project 1 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="power-bi">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Sales-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/ecommerce-dashboard.png');" aria-label="E-Commerce Sales Analytics Dashboard-Power BI"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Sales-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer">E-Commerce Sales Analytics Dashboard-Power BI</a>
-              </h3>
-              <p>End-to-end Power BI solution featuring RFM customer segmentation, forecasting, KPI tracking, drill-through analysis, and customer insights.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="power-bi">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Hospital-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/hospital-dashboard.png');" aria-label="Hospital Monitoring Dashboard-Power BI"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Hospital-analytics-dashboard-Power_BI" target="_blank" rel="noopener noreferrer">Hospital Monitoring Dashboard-Power BI</a>
-              </h3>
-              <p>Interactive healthcare analytics dashboard for monitoring patient demographics, hospital performance, treatment costs, and operational KPIs.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="excel">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Excel-hotel-management-dashboard-project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/hotel-dashboard.png');" aria-label="Hotel Management Dashboard-Excel"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Excel-hotel-management-dashboard-project" target="_blank" rel="noopener noreferrer">Hotel Management Dashboard-Excel</a>
-              </h3>
-              <p>Excel-based dashboard analyzing hotel bookings, revenue, cancellations, ADR metrics, lead times, and business performance.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="excel">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Excel-dengue-analytics-dashboard-project" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/dengue-dashboard.png');" aria-label="Dengue Report Analysis Dashboard-Excel"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Excel-dengue-analytics-dashboard-project" target="_blank" rel="noopener noreferrer">Dengue Report Analysis Dashboard-Excel</a>
-              </h3>
-              <p>Public health analytics dashboard for dengue surveillance, demographic analysis, diagnostic trends, and outbreak monitoring.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="sql">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Music_Store_Analysis-SQL" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/sql-music-store-analysis.png');" aria-label="Music Store Database Analysis-SQL"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Music_Store_Analysis-SQL" target="_blank" rel="noopener noreferrer">Music Store Database Analysis-SQL</a>
-              </h3>
-              <p>SQL-based business analysis project exploring customer behavior, sales performance, revenue trends, and music store insights using advanced SQL queries and relational database concepts.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="python">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Sales-Analysis-using-Python" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Python.png');" aria-label="Sales Analysis Using Python"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Sales-Analysis-using-Python" target="_blank" rel="noopener noreferrer">Sales Analysis Using Python</a>
-              </h3>
-              <p>End-to-end retail sales analytics project utilizing Python, Pandas, NumPy, Matplotlib, and Seaborn to analyze customer demographics, purchasing behavior, product preferences, and regional sales performance through exploratory data analysis and data visualization.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 7 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="python machine-learning">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Customer-Churn-Analysis-Predictive-Modeling-using-Python" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Customer_churn.png');" aria-label="Customer Churn Analysis: Predictive Modeling using Python"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Customer-Churn-Analysis-Predictive-Modeling-using-Python" target="_blank" rel="noopener noreferrer">Customer Churn Analysis: Predictive Modeling using Python</a>
-              </h3>
-              <p>Developed machine learning model to predict customer churn through data cleaning, exploratory data analysis, and classification techniques.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 8 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="sql">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Customer-segmentation-RFM-using-SQL" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Customer_segmentation_sql.png');" aria-label="Sales and Customer Segmentation Analysis using SQL"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Customer-segmentation-RFM-using-SQL" target="_blank" rel="noopener noreferrer">Sales and Customer Segmentation Analysis using SQL</a>
-              </h3>
-              <p>Analyzed sales data using SQL to generate business insights on customer segmentation, sales performance, and product trends.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 9 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="stata">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/Household-survey-data-management-analysis-STATA" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Household Survey Data Management.png');" aria-label="Household Survey Data Analysis: Data Management and Analysis using STATA"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/Household-survey-data-management-analysis-STATA" target="_blank" rel="noopener noreferrer">Household Survey Data Analysis: Data Management and Analysis using STATA</a>
-              </h3>
-              <p>Developed a reproducible Stata workflow for cleaning, validating, and analyzing 41,544 household records, including missing-data assessment, consistency checks, socioeconomic indicator construction, descriptive analysis, visualization, and robust OLS regression.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 10 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="automation">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/RMG-Business-Intelligence-Automation-Pipeline" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/RMG business intelligence automation pipeline.png');" aria-label="RMG Business Intelligence Automation"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/RMG-Business-Intelligence-Automation-Pipeline" target="_blank" rel="noopener noreferrer">RMG Business Intelligence Automation</a>
-              </h3>
-              <p>End-to-end business intelligence automation pipeline for Ready-Made Garment (RMG) production data, integrating Python ETL, data cleaning and validation, SQL Server, Power BI dashboards, PDF report export, Power Automate report distribution, and scheduled execution using Windows Task Scheduler.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 11 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="machine-learning">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task1-IrisFlowerClassification" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Iris Flower Classification.png');" aria-label="Iris Flower Classification"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task1-IrisFlowerClassification" target="_blank" rel="noopener noreferrer">Iris Flower Classification</a>
-              </h3>
-              <p>Machine learning classification project predicting Iris Setosa, Iris Versicolor, and Iris Virginica from sepal and petal measurements. Includes exploratory data analysis, comparison of Logistic Regression and K-Nearest Neighbors, and model evaluation using accuracy, precision, recall, F1-score, and confusion matrices with Python and Scikit-learn.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 12 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="machine-learning">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task3-CarPricePredictionwithMachineLearning" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Car price prediction with machine learning.png');" aria-label="Car Price Prediction"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task3-CarPricePredictionwithMachineLearning" target="_blank" rel="noopener noreferrer">Car Price Prediction</a>
-              </h3>
-              <p>Machine learning regression project predicting used car selling prices from vehicle characteristics. Includes data cleaning, feature engineering, exploratory data analysis, and comparison of Linear Regression, Random Forest, and Gradient Boosting using MAE, RMSE, and R-squared, with Python and Scikit-learn.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 13 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="machine-learning">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task4-EmailSpamDetection" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Email Spam Detection with Linear SVM.png');" aria-label="Email Spam Detection"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task4-EmailSpamDetection" target="_blank" rel="noopener noreferrer">Email Spam Detection</a>
-              </h3>
-              <p>NLP-based spam and ham message classification using the SMS Spam Collection Dataset. Includes text preprocessing, TF-IDF feature extraction, and comparison of Multinomial Naive Bayes, Logistic Regression, and Linear SVM, with Linear SVM selected for its F1-score.</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- Project 14 -->
-        <div class="col-md-6 d-flex ftco-animate project-item" data-categories="machine-learning">
-          <article class="blog-entry justify-content-end">
-            <a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task5-SalesPrediction" target="_blank" rel="noopener noreferrer" class="block-20 zoom-effect" style="background-image: url('images/Sales prediction using Python.png');" aria-label="Sales Prediction"></a>
-            <div class="text mt-3 float-right d-block">
-              <h3 class="heading">
-                <a href="https://github.com/SiamWR/OIBSIP/tree/main/DataScience-Task5-SalesPrediction" target="_blank" rel="noopener noreferrer">Sales Prediction</a>
-              </h3>
-              <p>Machine learning regression project predicting product sales from TV, radio, and newspaper advertising spending. Includes exploratory data analysis and a comparison of Linear Regression and Random Forest models using Python and Scikit-learn.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-    <div class="container">
-      <div class="row justify-content-center mb-5 pb-3">
-        <div class="col-md-7 heading-section text-center ftco-animate">
-          <h1 class="big big-2">Contact</h1>
-          <h2 class="mb-4">Contact Me</h2>
-          <p>Below are the details to reach out to me!</p>
-        </div>
-      </div>
-
-      <div class="row d-flex contact-info mb-5 justify-content-center">
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-map-signs"></span>
-            </div>
-            <h3 class="mb-4">Address</h3>
-            <p>Dhaka, Bangladesh</p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-phone2"></span>
-            </div>
-            <h3 class="mb-4">Contact Number</h3>
-            <p><a href="tel:+8801761110721">+880 1761-110721</a></p>
-          </div>
-        </div>
-
-        <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          <div class="align-self-stretch box p-4 text-center">
-            <div class="icon d-flex align-items-center justify-content-center">
-              <span class="icon-paper-plane"></span>
-            </div>
-            <h3 class="mb-4">Email Address</h3>
-            <p><a href="mailto:mdsiamwaliurrahman@gmail.com">mdsiamwaliurrahman@gmail.com</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-12 text-center">
-          <h4 class="mb-3">Find Me On</h4>
-          <ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center">
-            <li class="ftco-animate mx-2">
-              <a href="https://www.linkedin.com/in/mdsiamwaliur/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <span class="icon-linkedin"></span>
-              </a>
-            </li>
-            <li class="ftco-animate mx-2">
-              <a href="https://github.com/SiamWR" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <span class="icon-github"></span>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <button id="portfolio-scroll-top" type="button" aria-label="Scroll to top">
-    <span class="oi oi-arrow-top"></span>
-  </button>
-
-  <div id="ftco-loader" class="show fullscreen">
-    <svg class="circular" width="48px" height="48px" aria-hidden="true">
-      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"></circle>
-      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"></circle>
-    </svg>
   </div>
+</section>
+</main>
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="js/main.js"></script>
+<button id="top" type="button" aria-label="Scroll to top" hidden>↑</button>
 
-  <script>
-    (function () {
-      const typingAnimationElement = document.getElementById('typing-animation');
-      const typingTexts = ['Statistician  ', 'Data Analyst  ', 'Researcher   '];
-      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+<script>
+  const menu = document.querySelector('#menu');
+  const links = document.querySelector('#links');
 
-      if (typingAnimationElement) {
-        if (reducedMotion) {
-          typingAnimationElement.textContent = typingTexts[0].trim();
-        } else {
-          let textIndex = 0;
-          let characterIndex = 0;
-          let deleting = false;
+  function setMenu(open) {
+    links.classList.toggle('open', open);
+    menu.setAttribute('aria-expanded', String(open));
+  }
 
-          function typeLoop() {
-            const currentText = typingTexts[textIndex];
+  document.documentElement.classList.add('js');
+  menu.onclick = () => setMenu(menu.getAttribute('aria-expanded') !== 'true');
+  links.onclick = () => setMenu(false);
 
-            if (!deleting) {
-              characterIndex += 1;
-              typingAnimationElement.textContent = currentText.slice(0, characterIndex);
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
+      setMenu(false);
+      menu.focus();
+    }
+  });
 
-              if (characterIndex >= currentText.length) {
-                deleting = true;
-                window.setTimeout(typeLoop, 900);
-                return;
-              }
-            } else {
-              characterIndex -= 1;
-              typingAnimationElement.textContent = currentText.slice(0, characterIndex);
+  const sections = [...document.querySelectorAll('main > section')];
+  const navLinks = [...links.querySelectorAll('a')];
+  const topButton = document.querySelector('#top');
 
-              if (characterIndex <= 0) {
-                deleting = false;
-                textIndex = (textIndex + 1) % typingTexts.length;
-              }
-            }
+  function updateNavigation() {
+    const threshold = document.querySelector('.site-nav').offsetHeight + 24;
+    let active = sections[0];
 
-            window.setTimeout(typeLoop, deleting ? 55 : 115);
-          }
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top <= threshold) active = section;
+    }
+    if (Math.ceil(scrollY + innerHeight) >= document.documentElement.scrollHeight) {
+      active = sections[sections.length - 1];
+    }
 
-          typeLoop();
-        }
+    for (const link of navLinks) {
+      if (link.hash === '#' + active.id) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+    topButton.hidden = scrollY < 650;
+  }
+
+  window.addEventListener('scroll', updateNavigation, { passive: true });
+  window.addEventListener('resize', updateNavigation);
+  topButton.onclick = () => window.scrollTo({ top: 0 });
+  updateNavigation();
+
+  const role = document.querySelector('#role');
+  const phrases = [
+    'Statistician', 'Data Analyst', 'Researcher',
+    'Data Analytics', 'Data Science', 'Statistics & Research'
+  ];
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  let timer;
+
+  function rotateRoles() {
+    clearTimeout(timer);
+    if (motion.matches) {
+      role.textContent = phrases.join(' · ');
+      return;
+    }
+
+    let index = 0;
+    role.textContent = phrases[index];
+
+    function nextPhrase() {
+      index = (index + 1) % phrases.length;
+      let length = 0;
+
+      function type() {
+        role.textContent = phrases[index].slice(0, ++length);
+        timer = length < phrases[index].length
+          ? setTimeout(type, 65)
+          : setTimeout(nextPhrase, 2200);
       }
+      type();
+    }
 
-      const scrollTopButton = document.getElementById('portfolio-scroll-top');
+    timer = setTimeout(nextPhrase, 2200);
+  }
 
-      if (scrollTopButton) {
-        function updateScrollTopVisibility() {
-          scrollTopButton.classList.toggle('is-visible', window.scrollY > 650);
-        }
+  rotateRoles();
+  motion.addEventListener('change', rotateRoles);
 
-        updateScrollTopVisibility();
-        window.addEventListener('scroll', updateScrollTopVisibility, { passive: true });
+  const cards = [...document.querySelectorAll('.project')];
+  const filters = [...document.querySelectorAll('[data-filter]')];
 
-        scrollTopButton.addEventListener('click', function () {
-          window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
-        });
-      }
+  function matches(card, filter) {
+    return filter === 'all' || card.dataset.categories.split(' ').includes(filter);
+  }
 
-      document.querySelectorAll('#ftco-nav .nav-link').forEach(function (link) {
-        link.addEventListener('click', function () {
-          const nav = document.getElementById('ftco-nav');
-          if (window.innerWidth < 992 && nav && nav.classList.contains('show') && window.jQuery) {
-            window.jQuery(nav).collapse('hide');
-          }
-        });
-      });
-    })();
-  </script>
+  function filterProjects(button) {
+    const filter = button.dataset.filter;
+    let count = 0;
 
-  <script>
-    // Filter the original cards in place; their content and links are never rebuilt.
-    (function () {
-      'use strict';
+    for (const card of cards) {
+      card.hidden = !matches(card, filter);
+      if (!card.hidden) count++;
+    }
+    for (const item of filters) {
+      item.setAttribute('aria-pressed', String(item === button));
+    }
 
-      const section = document.getElementById('project-section');
-      if (!section) return;
+    document.querySelector('#status').textContent = filter === 'all'
+      ? 'Showing all ' + count + ' projects'
+      : button.firstChild.textContent + ': showing ' + count + ' of ' + cards.length + ' projects';
 
-      const panel = section.querySelector('#project-filter-panel');
-      const grid = section.querySelector('#portfolio-project-grid');
-      const status = section.querySelector('#project-filter-status');
-      const buttons = Array.from(section.querySelectorAll('.project-filter'));
-      const cards = Array.from(section.querySelectorAll('.project-item'));
-      if (!panel || !grid || !status || !buttons.length || !cards.length) return;
+    updateNavigation();
+  }
 
-      const categories = new Map(cards.map(function (card) {
-        return [card, (card.dataset.categories || '').split(/\s+/).filter(Boolean)];
-      }));
-      const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
-      let activeFilter = 'all';
-      let transition = null;
+  for (const button of filters) {
+    const count = document.createElement('small');
+    count.setAttribute('aria-hidden', 'true');
+    count.textContent = cards.filter(card => matches(card, button.dataset.filter)).length;
+    button.append(count);
+    button.onclick = () => filterProjects(button);
+  }
 
-      function matches(card, category) {
-        return category === 'all' || categories.get(card).includes(category);
-      }
-
-      function updateStatus(category, count) {
-        const button = buttons.find(function (item) {
-          return item.dataset.filter === category;
-        });
-        const label = button.querySelector('span').textContent;
-        status.textContent = category === 'all'
-          ? 'Showing all ' + count + ' projects'
-          : label + ': showing ' + count + ' of ' + cards.length + ' projects';
-      }
-
-      function filterProjects(category) {
-        if (category === activeFilter) return;
-        activeFilter = category;
-        if (transition) {
-          transition.cancel();
-          transition = null;
-        }
-
-        let visibleCount = 0;
-        cards.forEach(function (card) {
-          const visible = matches(card, category);
-          card.hidden = !visible;
-          if (visible) visibleCount += 1;
-        });
-
-        buttons.forEach(function (button) {
-          button.setAttribute('aria-pressed', String(button.dataset.filter === category));
-        });
-        grid.classList.add('has-filtered');
-        updateStatus(category, visibleCount);
-
-        // One cancellable fade avoids queued transitions during rapid clicks.
-        if (!motionPreference.matches && typeof grid.animate === 'function') {
-          transition = grid.animate(
-            [{ opacity: 0.45 }, { opacity: 1 }],
-            { duration: 220, easing: 'ease-out' }
-          );
-        }
-
-        // Refresh existing scroll/section measurements after the grid changes height.
-        window.dispatchEvent(new Event('resize'));
-        if (window.jQuery && window.jQuery.fn.scrollspy) {
-          window.jQuery('body').scrollspy('refresh');
-        }
-      }
-
-      buttons.forEach(function (button) {
-        const category = button.dataset.filter;
-        const count = cards.filter(function (card) { return matches(card, category); }).length;
-        button.querySelector('.project-filter-count').textContent = String(count);
-        button.addEventListener('click', function () { filterProjects(category); });
-      });
-
-      updateStatus('all', cards.length);
-      panel.hidden = false;
-    })();
-  </script>
+  filterProjects(filters[0]);
+  document.querySelector('#panel').hidden = false;
+</script>
 </body>
 </html>
